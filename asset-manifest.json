@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/YirueiLuBlog/static/css/main.5f361e03.chunk.css",
+    "main.js": "/YirueiLuBlog/static/js/main.e93a4e91.chunk.js",
+    "main.js.map": "/YirueiLuBlog/static/js/main.e93a4e91.chunk.js.map",
+    "runtime-main.js": "/YirueiLuBlog/static/js/runtime-main.4206247f.js",
+    "runtime-main.js.map": "/YirueiLuBlog/static/js/runtime-main.4206247f.js.map",
+    "static/js/2.01c42947.chunk.js": "/YirueiLuBlog/static/js/2.01c42947.chunk.js",
+    "static/js/2.01c42947.chunk.js.map": "/YirueiLuBlog/static/js/2.01c42947.chunk.js.map",
+    "index.html": "/YirueiLuBlog/index.html",
+    "precache-manifest.c78025defac9b54616bf605210a5db8d.js": "/YirueiLuBlog/precache-manifest.c78025defac9b54616bf605210a5db8d.js",
+    "service-worker.js": "/YirueiLuBlog/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/YirueiLuBlog/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.01c42947.chunk.js.LICENSE.txt": "/YirueiLuBlog/static/js/2.01c42947.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/YirueiLuBlog/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4206247f.js",
+    "static/js/2.01c42947.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.e93a4e91.chunk.js"
+  ]
+}
