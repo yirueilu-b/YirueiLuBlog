@@ -14,20 +14,27 @@ import IconButton from '@material-ui/core/IconButton';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Tooltip from '@material-ui/core/Tooltip';
+import Menu from './Menu'
 
 const Title = "YirueiLu's Blog";
 
 const appBarStyle = makeStyles((theme) => ({
     root: {
-        maxWidth:'100%',
-        paddingLeft: '10%',
-        paddingRight: '10%',
+        maxWidth: '100%',
+        [theme.breakpoints.up('sm')]: {
+            paddingLeft: '10%',
+            paddingRight: '10%',
+        },
+        paddingLeft: '0%',
+        paddingRight: '0%',
     },
     iconButton1: {
-        marginLeft: 'auto'
+        marginRight: theme.spacing(0),
+        paddingLeft: 0
     },
     iconButton2: {
-        marginLeft: theme.spacing(0)
+        marginRight: 0,
+        marginLeft: 'auto'
     },
 }));
 
@@ -108,19 +115,34 @@ export default function BackToTop(props) {
             <HideOnScroll {...props}>
                 <AppBar className={classes.root} color="default">
                     <Toolbar>
-                        <Typography variant="h6">{Title}</Typography>
-                        <Tooltip title="切換佈景主題">
-                            <IconButton className={classes.iconButton1} edge="end" color="default"
-                                        aria-label="切換佈景主題" onClick={props.onToggleDark}>
+                        {/*{props.menu}*/}
+                        {/*<Tooltip title="Menu">*/}
+                            {/*<IconButton className={classes.iconButton1}*/}
+                                        {/*edge="end"*/}
+                                        {/*color="default"*/}
+                                        {/*onClick={props.onToggleDark}>*/}
+                                {/*<MenuIcon/>*/}
+                            {/*</IconButton>*/}
+                        {/*</Tooltip>*/}
+                        <Menu/>
+                        <Typography variant="h6">
+                            {Title}
+                        </Typography>
+                        <Tooltip
+                            title={props.theme.palette.type === "light" ? 'Switch to dark theme' : 'Switch to light theme'}>
+                            <IconButton className={classes.iconButton2}
+                                        edge="end"
+                                        color="default"
+                                        onClick={props.onToggleDark}>
                                 {props.theme.palette.type === "light" ? <Brightness7Icon/> : <Brightness4Icon/>}
                             </IconButton>
                         </Tooltip>
                     </Toolbar>
                 </AppBar>
             </HideOnScroll>
-            <Toolbar />
+            <Toolbar/>
             <ScrollTop {...props}>
-                <Fab color="secondary" size="small" aria-label="scroll back to top">
+                <Fab color="default" size="small" aria-label="scroll back to top">
                     <KeyboardArrowUpIcon/>
                 </Fab>
             </ScrollTop>

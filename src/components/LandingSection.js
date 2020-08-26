@@ -17,6 +17,8 @@ const post = {
 
 const useStyles = makeStyles((theme) => ({
     mainFeaturedPost: {
+        paddingLeft: '10%',
+        paddingRight: '10%',
         position: 'relative',
         backgroundColor: theme.palette.grey[800],
         color: theme.palette.common.white,
@@ -36,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: 'rgba(0,0,0,.3)',
     },
     mainFeaturedPostContent: {
-        textJustify:'left',
+        textAlign:'left',
         position: 'relative',
         padding: theme.spacing(3),
         [theme.breakpoints.up('md')]: {
@@ -54,7 +56,6 @@ export default function MainFeaturedPost(props) {
         <Paper
             className={classes.mainFeaturedPost}
             style={{backgroundImage: `url(${post.image})`}}
-            id="back-to-top-anchor"
         >
             {/* Increase the priority of the hero background image */}
             {<img style={{display: 'none'}} src={post.image} alt='imageText'/>}
@@ -62,15 +63,17 @@ export default function MainFeaturedPost(props) {
             <Grid container>
                 <Grid item md={6}>
                     <div className={classes.mainFeaturedPostContent}>
-                        <Typography component="h1" variant="h3" color="inherit" gutterBottom>
+                        <Typography variant="h3" color="inherit" gutterBottom id="back-to-top-anchor">
                             Blog Title
                         </Typography>
-                        <Typography variant="h5" color="inherit" paragraph>
+                        <Typography variant="h6" color="inherit">
                             Blog Description
                         </Typography>
-                        <Link variant="subtitle1" href="#">
-                            Some Links or Buttons
-                        </Link>
+
+                        {/*<Link variant="subtitle1" href="#">*/}
+                            {/*Some Links or Buttons*/}
+                        {/*</Link>*/}
+
                     </div>
                 </Grid>
             </Grid>

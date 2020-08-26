@@ -12,23 +12,25 @@ import Navbar from './components/Navbar'
 import LandingSection from './components/LandingSection'
 import ArticleList from './components/ArticleList'
 
+const fontFamily = [
+    'Roboto',
+    '-apple-system',
+    'BlinkMacSystemFont',
+    '"Segoe UI"',
+    '"Helvetica Neue"',
+    'Arial',
+    'sans-serif',
+    '"Apple Color Emoji"',
+    '"Segoe UI Emoji"',
+    '"Segoe UI Symbol"',
+].join(',');
+
 let myTheme = unstable_createMuiStrictModeTheme({
     palette: {
         type: 'dark'
     },
     typography: {
-        fontFamily: [
-            'Roboto',
-            '-apple-system',
-            'BlinkMacSystemFont',
-            '"Segoe UI"',
-            '"Helvetica Neue"',
-            'Arial',
-            'sans-serif',
-            '"Apple Color Emoji"',
-            '"Segoe UI Emoji"',
-            '"Segoe UI Symbol"',
-        ].join(','),
+        fontFamily: fontFamily,
     },
 });
 
@@ -58,18 +60,7 @@ class App extends React.Component {
                 type: newPaletteType
             },
             typography: {
-                fontFamily: [
-                    'Roboto',
-                    '-apple-system',
-                    'BlinkMacSystemFont',
-                    '"Segoe UI"',
-                    '"Helvetica Neue"',
-                    'Arial',
-                    'sans-serif',
-                    '"Apple Color Emoji"',
-                    '"Segoe UI Emoji"',
-                    '"Segoe UI Symbol"',
-                ].join(','),
+                fontFamily: fontFamily,
             },
         });
         this.setState({theme: myTheme});

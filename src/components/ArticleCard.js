@@ -38,7 +38,7 @@ export default function MediaControlCard() {
     const classes = useStyles();
     return (
         <Card className={classes.root} elevation={0} square={true}>
-            <Hidden mdDown>
+            <Hidden xsDown>
                 <CardMedia
                     className={classes.card_image}
                     image="https://miro.medium.com/max/3118/1*iwPLQjyFYRTVeQ2cb4S9rA.png"
