@@ -5,6 +5,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
+import Button from '@material-ui/core/Button';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -32,6 +34,11 @@ const useStyles = makeStyles((theme) => ({
         textJustify: 'bottom',
         VerticalAlign: 'text-bottom',
     },
+    read_button: {
+        backgroundColor: 'rgba(56, 163, 216, 1)',
+        color: 'white'
+    },
+
 }));
 
 export default function MediaControlCard() {
@@ -47,20 +54,36 @@ export default function MediaControlCard() {
             </Hidden>
             <div className={classes.card_info}>
                 <CardContent className={classes.card_title}>
-                    <Typography variant="h5">
+                    <Typography gutterBottom variant="h5">
                         This Is a Demo Post Card, Here Is Title
                     </Typography>
+                    <Typography gutterBottom component='h1' variant="caption" color="textSecondary">
+                        2020-08-26 10:30 AM
+                    </Typography>
                     <Typography variant="subtitle1" color="textSecondary">
-                        Some description about this post here, get this description from reading the cleaned up file which is generated from all markdown files.
+                        Some description about this post here, get this description from reading the cleaned up file
+                        which is generated from all markdown files.
                     </Typography>
                 </CardContent>
                 <CardContent className={classes.card_detail}>
-                    <Typography variant="subtitle1" color="textSecondary">
-                        2020-08-26 10:30 AM
-                    </Typography>
-                    <Typography variant="button" color="textSecondary">
-                        ReadMore
-                    </Typography>
+                    <Button className={classes.read_button}
+                        size="small"
+                        variant="contained"
+                        endIcon={<ArrowForwardIosIcon style={{fontSize: 12, paddingLeft: 1}}/>}
+                    >
+                        READ MORE
+                    </Button>
+                    {/*<Button className={classes.read_button}*/}
+                            {/*size="small"*/}
+                            {/*variant="contained"*/}
+                            {/*href="#contained-buttons"*/}
+                            {/*color="default"*/}
+                    {/*>*/}
+                        {/*<Typography variant="button" color="textSecondary">*/}
+                            {/*READ MORE*/}
+                        {/*</Typography>*/}
+                        {/*<ArrowForwardIosIcon color="primary" style={{fontSize: 12, paddingLeft: 1}}/>*/}
+                    {/*</Button>*/}
                 </CardContent>
             </div>
         </Card>
