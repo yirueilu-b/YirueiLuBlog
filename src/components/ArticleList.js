@@ -1,5 +1,5 @@
 import React from 'react';
-import {makeStyles, useTheme} from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container'
 import ArticleCard from './ArticleCard'
 import Grid from '@material-ui/core/Grid';
@@ -7,10 +7,11 @@ import Grid from '@material-ui/core/Grid';
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
+        marginTop: '10vh',
+        marginBottom: '10vh',
     },
     card_grid:{
-        height: 200,
-        marginTop: 10
+        height: 320,
     }
 }));
 
@@ -21,7 +22,7 @@ export default function MediaControlCard() {
 
     for (let i = 0; i <= 5; i++) {
         Articles.push(
-            <Grid item xs={8} key={i} className={classes.card_grid}>
+            <Grid item xs={12} md={9} key={i} className={classes.card_grid}>
                 <ArticleCard/>
             </Grid>
         )

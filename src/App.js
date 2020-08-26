@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import {MuiThemeProvider, createMuiTheme} from "@material-ui/core/styles";
+// import {MuiThemeProvider, createMuiTheme} from "@material-ui/core/styles";
+import {MuiThemeProvider} from "@material-ui/core/styles";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import {withStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container'
@@ -13,7 +14,21 @@ import ArticleList from './components/ArticleList'
 let myTheme = unstable_createMuiStrictModeTheme({
     palette: {
         type: 'dark'
-    }
+    },
+    typography: {
+        fontFamily: [
+            'Roboto',
+            '-apple-system',
+            'BlinkMacSystemFont',
+            '"Segoe UI"',
+            '"Helvetica Neue"',
+            'Arial',
+            'sans-serif',
+            '"Apple Color Emoji"',
+            '"Segoe UI Emoji"',
+            '"Segoe UI Symbol"',
+        ].join(','),
+    },
 });
 
 const useStyles = {

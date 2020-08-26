@@ -1,72 +1,67 @@
 import React from 'react';
-import {makeStyles, useTheme} from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import SkipNextIcon from '@material-ui/icons/SkipNext';
+import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         height: '100%',
         display: 'flex',
+        backgroundColor: theme.palette.background.default,
     },
-    details: {
+    card_image: {
+        width: '40%',
+    },
+    card_info: {
         display: 'flex',
         flexDirection: 'column',
+        borderBottom: '1px solid',
+        borderBottomColor: theme.palette.divider,
+        width: '100%',
     },
-    content: {
+    card_title: {
         flex: '1 0 auto',
+        textAlign: 'left',
     },
-    cover: {
-        width: 151,
-    },
-    controls: {
-        display: 'flex',
-        alignItems: 'center',
-        paddingLeft: theme.spacing(1),
-        paddingBottom: theme.spacing(1),
-    },
-    playIcon: {
-        height: 38,
-        width: 38,
+    card_detail: {
+        flex: '1 0 auto',
+        textAlign: 'right',
+        textJustify: 'bottom',
+        VerticalAlign: 'text-bottom',
     },
 }));
 
 export default function MediaControlCard() {
     const classes = useStyles();
-    const theme = useTheme();
-
     return (
-        <Card className={classes.root}>
-            <CardMedia
-                className={classes.cover}
-                image="https://miro.medium.com/max/3118/1*iwPLQjyFYRTVeQ2cb4S9rA.png"
-                title="Live from space album cover"
-            />
-            <div className={classes.details}>
-                <CardContent className={classes.content}>
-                    <Typography component="h5" variant="h5">
-                        Demo Post Card
+        <Card className={classes.root} elevation={0} square={true}>
+            <Hidden mdDown>
+                <CardMedia
+                    className={classes.card_image}
+                    image="https://miro.medium.com/max/3118/1*iwPLQjyFYRTVeQ2cb4S9rA.png"
+                    title="Live from space album cover"
+                />
+            </Hidden>
+            <div className={classes.card_info}>
+                <CardContent className={classes.card_title}>
+                    <Typography variant="h5">
+                        This Is a Demo Post Card, Here Is Title
                     </Typography>
                     <Typography variant="subtitle1" color="textSecondary">
-                        subtitle
+                        Some description about this post here, get this description from reading the cleaned up file which is generated from all markdown files.
                     </Typography>
                 </CardContent>
-                <div className={classes.controls}>
-                    {/*<IconButton aria-label="previous">*/}
-                        {/*{theme.direction === 'rtl' ? <SkipNextIcon/> : <SkipPreviousIcon/>}*/}
-                    {/*</IconButton>*/}
-                    {/*<IconButton aria-label="play/pause">*/}
-                        {/*<PlayArrowIcon className={classes.playIcon}/>*/}
-                    {/*</IconButton>*/}
-                    {/*<IconButton aria-label="next">*/}
-                        {/*{theme.direction === 'rtl' ? <SkipPreviousIcon/> : <SkipNextIcon/>}*/}
-                    {/*</IconButton>*/}
-                </div>
+                <CardContent className={classes.card_detail}>
+                    <Typography variant="subtitle1" color="textSecondary">
+                        2020-08-26 10:30 AM
+                    </Typography>
+                    <Typography variant="button" color="textSecondary">
+                        ReadMore
+                    </Typography>
+                </CardContent>
             </div>
         </Card>
     );
