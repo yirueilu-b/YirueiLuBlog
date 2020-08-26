@@ -15,10 +15,14 @@ import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Tooltip from '@material-ui/core/Tooltip';
 
-const Title = "Blog";
+const Title = "YirueiLu's Blog";
 
 const appBarStyle = makeStyles((theme) => ({
-    root: {},
+    root: {
+        maxWidth:'100%',
+        paddingLeft: '10%',
+        paddingRight: '10%',
+    },
     iconButton1: {
         marginLeft: 'auto'
     },
@@ -114,7 +118,7 @@ export default function BackToTop(props) {
                     </Toolbar>
                 </AppBar>
             </HideOnScroll>
-            <Toolbar id="back-to-top-anchor"/>
+            <Toolbar />
             <ScrollTop {...props}>
                 <Fab color="secondary" size="small" aria-label="scroll back to top">
                     <KeyboardArrowUpIcon/>

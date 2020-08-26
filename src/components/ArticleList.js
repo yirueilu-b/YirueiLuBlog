@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
-        marginTop: '10vh',
+        marginTop: '0vh',
         marginBottom: '10vh',
     },
     card_grid:{

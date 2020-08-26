@@ -9,6 +9,7 @@ import {unstable_createMuiStrictModeTheme} from '@material-ui/core/styles';
 
 
 import Navbar from './components/Navbar'
+import LandingSection from './components/LandingSection'
 import ArticleList from './components/ArticleList'
 
 let myTheme = unstable_createMuiStrictModeTheme({
@@ -35,7 +36,7 @@ const useStyles = {
     root: {
         flexGrow: 1,
         maxWidth: '100vw',
-        minHeight: 'calc(100vh - 68px)',
+        padding: 0,
         textAlign: 'center',
     },
 };
@@ -52,7 +53,25 @@ class App extends React.Component {
 
     toggleDarkTheme = (event) => {
         let newPaletteType = this.state.theme.palette.type === "light" ? "dark" : "light";
-        myTheme = unstable_createMuiStrictModeTheme({palette: {type: newPaletteType}});
+        myTheme = unstable_createMuiStrictModeTheme({
+            palette: {
+                type: newPaletteType
+            },
+            typography: {
+                fontFamily: [
+                    'Roboto',
+                    '-apple-system',
+                    'BlinkMacSystemFont',
+                    '"Segoe UI"',
+                    '"Helvetica Neue"',
+                    'Arial',
+                    'sans-serif',
+                    '"Apple Color Emoji"',
+                    '"Segoe UI Emoji"',
+                    '"Segoe UI Symbol"',
+                ].join(','),
+            },
+        });
         this.setState({theme: myTheme});
     };
 
@@ -63,10 +82,9 @@ class App extends React.Component {
                 <CssBaseline/>
                 <Container className={classes.root}>
 
-                    <div className="App">
-                        <Navbar theme={this.state.theme} onToggleDark={this.toggleDarkTheme}/>
-                        <ArticleList/>
-                    </div>
+                    <Navbar theme={this.state.theme} onToggleDark={this.toggleDarkTheme}/>
+                    <LandingSection/>
+                    <ArticleList/>
 
                 </Container>
             </MuiThemeProvider>
