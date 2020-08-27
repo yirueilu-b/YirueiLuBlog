@@ -19,7 +19,8 @@ def get_title(html_parsed):
 
 
 def get_description(html_parsed):
-    description = html_parsed.p.text[:DESCRIPTION_MAX_LENGTH]
+    all_text = ''.join([x.text for x in html_parsed.find_all('p')])
+    description = all_text[:DESCRIPTION_MAX_LENGTH]
     return description
 
 
@@ -59,9 +60,9 @@ if __name__ == '__main__':
         item['article_cover_image_url'] = get_cover_image_url(article_parsed)
         res_json.append(item)
         print(item['article_title'])
-    res_json.sort(key=lambda x: x['article_datetime'])
+        print(item['article_description'])
+    res_json.sort(key=lambda x: -x['article_datetime'])
     for i in range(len(res_json)): res_json[i]['article_datetime'] = time.ctime(res_json[i]['article_datetime'])
-
     res_json = json.dumps(res_json, indent=4)
     with open(RES_JSON_PATH, 'w') as outfile:
         json.dump(res_json, outfile)

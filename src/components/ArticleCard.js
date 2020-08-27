@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'right',
     },
     read_button: {
-        backgroundColor: 'rgba(56, 163, 216, 1)',
+        backgroundColor: 'rgba(55, 168, 218, 1)',
         color: 'white'
     },
 

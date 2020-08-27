@@ -4,6 +4,15 @@ import {makeStyles} from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import Tooltip from '@material-ui/core/Tooltip';
+import IconButton from '@material-ui/core/IconButton';
+import Divider from '@material-ui/core/Divider';
+
+
+const blog_title = "YirueiLu's Blog";
+const blog_description = "Some notes about web, machining learning and coding.";
 
 const post = {
     title: 'Title of a longer featured blog post',
@@ -11,7 +20,6 @@ const post = {
         "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
     image: 'https://source.unsplash.com/random',
     imgText: 'main image description',
-    linkText: 'Continue reading…',
 };
 
 const useStyles = makeStyles((theme) => ({
@@ -37,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: 'rgba(0,0,0,.3)',
     },
     mainFeaturedPostContent: {
-        textAlign:'left',
+        textAlign: 'left',
         position: 'relative',
         padding: theme.spacing(3),
         [theme.breakpoints.up('md')]: {
@@ -45,6 +53,16 @@ const useStyles = makeStyles((theme) => ({
             paddingRight: 0,
         },
     },
+    iconButton1: {
+        marginLeft: -12,
+        // color: 'rgba(91, 192, 222, 1)',
+        // backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    },
+    iconButton2: {
+        // marginLeft: 24,
+        // color: 'rgba(91, 192, 222, 1)',
+        // backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    }
 }));
 
 export default function MainFeaturedPost(props) {
@@ -62,17 +80,32 @@ export default function MainFeaturedPost(props) {
             <Grid container>
                 <Grid item md={6}>
                     <div className={classes.mainFeaturedPostContent}>
-                        <Typography variant="h3" color="inherit" gutterBottom id="back-to-top-anchor">
-                            Blog Title
+                        <Typography gutterBottom variant="h4" color="inherit" id="back-to-top-anchor">
+                            {blog_title}
                         </Typography>
-                        <Typography variant="h6" color="inherit">
-                            Blog Description
+                        <Typography gutterBottom variant="subtitle1" color="inherit">
+                            {blog_description}
                         </Typography>
-
-                        {/*<Link variant="subtitle1" href="#">*/}
-                            {/*Some Links or Buttons*/}
-                        {/*</Link>*/}
-
+                        <Tooltip title='LinkedIn'>
+                            <IconButton
+                                className={classes.iconButton1}
+                                edge="end"
+                                color="inherit"
+                                href='https://www.linkedin.com/in/a02496104/'
+                            >
+                                <LinkedInIcon/>
+                            </IconButton>
+                        </Tooltip>
+                        <Tooltip title='Github'>
+                            <IconButton
+                                className={classes.iconButton2}
+                                edge="end"
+                                color="inherit"
+                                href='https://github.com/yirueilu-b'
+                            >
+                                <GitHubIcon/>
+                            </IconButton>
+                        </Tooltip>
                     </div>
                 </Grid>
             </Grid>
