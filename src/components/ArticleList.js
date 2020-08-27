@@ -1,17 +1,19 @@
 import React from 'react';
 import {withStyles} from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container'
 import ArticleCard from './ArticleCard'
 import Grid from '@material-ui/core/Grid';
 import article_list from '../article_list.json'
 import Pagination from '@material-ui/lab/Pagination';
 
-const ARTICLE_PER_PAGE = 5;
+const ARTICLE_PER_PAGE = 3;
 
 const useStyles = theme => ({
     root: {
         display: 'flex',
         marginTop: '0vh',
         marginBottom: '10vh',
+        // minHeight: 800,
     },
     card_grid: {},
     pagination: {
@@ -67,8 +69,8 @@ class MediaControlCard extends React.Component {
         }
 
         return (
+            <Container className={classes.root}>
                 <Grid
-                    className={classes.root}
                     container
                     spacing={0}
                     direction="row"
@@ -94,6 +96,7 @@ class MediaControlCard extends React.Component {
                     </Grid>
                 </Grid>
 
+            </Container>
         );
     }
 }

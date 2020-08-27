@@ -37,7 +37,11 @@ def get_datetime(path):
 
 
 def get_cover_image_url(html_parsed):
-    cover_image = html_parsed.img.attrs['src']
+    try:
+        cover_image = html_parsed.img.attrs['src']
+    except Exception as e:
+        print(e)
+        cover_image = 'https://miro.medium.com/max/3118/1*iwPLQjyFYRTVeQ2cb4S9rA.png'
     return cover_image
 
 
