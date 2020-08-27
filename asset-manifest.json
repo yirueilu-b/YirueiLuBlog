@@ -1,22 +1,27 @@
 {
   "files": {
     "main.css": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css",
-    "main.js": "/YirueiLuBlog/static/js/main.7faec20c.chunk.js",
-    "main.js.map": "/YirueiLuBlog/static/js/main.7faec20c.chunk.js.map",
+    "main.js": "/YirueiLuBlog/static/js/main.34da432c.chunk.js",
+    "main.js.map": "/YirueiLuBlog/static/js/main.34da432c.chunk.js.map",
     "runtime-main.js": "/YirueiLuBlog/static/js/runtime-main.4206247f.js",
     "runtime-main.js.map": "/YirueiLuBlog/static/js/runtime-main.4206247f.js.map",
-    "static/js/2.d31289a0.chunk.js": "/YirueiLuBlog/static/js/2.d31289a0.chunk.js",
-    "static/js/2.d31289a0.chunk.js.map": "/YirueiLuBlog/static/js/2.d31289a0.chunk.js.map",
+    "static/js/2.815e80e3.chunk.js": "/YirueiLuBlog/static/js/2.815e80e3.chunk.js",
+    "static/js/2.815e80e3.chunk.js.map": "/YirueiLuBlog/static/js/2.815e80e3.chunk.js.map",
     "index.html": "/YirueiLuBlog/index.html",
-    "precache-manifest.8c11d746e198bf04380b05a4d1ab9a6e.js": "/YirueiLuBlog/precache-manifest.8c11d746e198bf04380b05a4d1ab9a6e.js",
+    "precache-manifest.a86e6afbf4a6fcb098892b9fb2c4450f.js": "/YirueiLuBlog/precache-manifest.a86e6afbf4a6fcb098892b9fb2c4450f.js",
     "service-worker.js": "/YirueiLuBlog/service-worker.js",
     "static/css/main.7cc96115.chunk.css.map": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css.map",
-    "static/js/2.d31289a0.chunk.js.LICENSE.txt": "/YirueiLuBlog/static/js/2.d31289a0.chunk.js.LICENSE.txt"
+    "static/js/2.815e80e3.chunk.js.LICENSE.txt": "/YirueiLuBlog/static/js/2.815e80e3.chunk.js.LICENSE.txt",
+    "static/media/My PyCharm Settings.md": "/YirueiLuBlog/static/media/My PyCharm Settings.27e585ed.md",
+    "static/media/Use Python to Build a BTC Auto Trader on Poloniex.md": "/YirueiLuBlog/static/media/Use Python to Build a BTC Auto Trader on Poloniex.3151a62b.md",
+    "static/media/yolact.md": "/YirueiLuBlog/static/media/yolact.a13ce874.md",
+    "static/media/機器學習基石_01.md": "/YirueiLuBlog/static/media/機器學習基石_01.40ff690b.md",
+    "static/media/機器學習基石_02.md": "/YirueiLuBlog/static/media/機器學習基石_02.a56f83db.md"
   },
   "entrypoints": [
     "static/js/runtime-main.4206247f.js",
-    "static/js/2.d31289a0.chunk.js",
+    "static/js/2.815e80e3.chunk.js",
     "static/css/main.7cc96115.chunk.css",
-    "static/js/main.7faec20c.chunk.js"
+    "static/js/main.34da432c.chunk.js"
   ]
 }
