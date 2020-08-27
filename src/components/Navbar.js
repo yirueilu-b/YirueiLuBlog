@@ -40,6 +40,7 @@ const appBarStyle = makeStyles((theme) => ({
 
 const backToTopStyles = makeStyles((theme) => ({
     root: {
+        zIndex: 100,
         position: 'fixed',
         bottom: theme.spacing(2),
         right: theme.spacing(2),
