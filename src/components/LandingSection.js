@@ -8,7 +8,6 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
-import Divider from '@material-ui/core/Divider';
 
 
 const blog_title = "YirueiLu's Blog";
