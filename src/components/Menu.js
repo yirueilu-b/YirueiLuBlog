@@ -12,6 +12,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import HomeIcon from '@material-ui/icons/Home';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ClassIcon from '@material-ui/icons/Class';
+import {NavLink} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     list: {
@@ -34,9 +35,18 @@ export default function TemporaryDrawer() {
     });
 
     const menu_items = {
-        Blog: <HomeIcon/>,
-        About: <AccountCircleIcon/>,
-        Category: <ClassIcon/>,
+        Blog: {
+            icon:<HomeIcon/>,
+            link:'/blog'
+        },
+        About: {
+            icon:<AccountCircleIcon/>,
+            link:'/about'
+        },
+        Category: {
+            icon:<ClassIcon/>,
+            link:'/category'
+        },
     };
     // const listItems = Object.keys(tifs).map(function (key) {
     //     return <option value={key}>{tifs[key]}</option>
@@ -69,8 +79,8 @@ export default function TemporaryDrawer() {
             {/*<Divider/>*/}
             <List>
                 {Object.keys(menu_items).map((key, index) => (
-                    <ListItem button key={key}>
-                        <ListItemIcon>{menu_items[key]}</ListItemIcon>
+                    <ListItem button component={NavLink} to={menu_items[key]['link']}  key={key}>
+                        <ListItemIcon>{menu_items[key]['icon']}</ListItemIcon>
                         <ListItemText primary={key}/>
                     </ListItem>
                 ))}

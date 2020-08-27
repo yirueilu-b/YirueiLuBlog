@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -62,11 +63,12 @@ export default function MediaControlCard(props) {
                 </CardContent>
                 <CardContent className={classes.card_detail}>
                     <Button
+                        component={Link}
                         className={classes.read_button}
                         size="small"
                         variant="contained"
                         endIcon={<ArrowForwardIosIcon style={{fontSize: 12, paddingLeft: 1}}/>}
-                        href={props.post_link}
+                        to={props.post_link}
                     >
                         READ MORE
                     </Button>

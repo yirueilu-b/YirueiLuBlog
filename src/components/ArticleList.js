@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import article_list from '../article_list.json'
 import Pagination from '@material-ui/lab/Pagination';
 
-const ARTICLE_PER_PAGE = 3;
+const ARTICLE_PER_PAGE = 5;
 
 const useStyles = theme => ({
     root: {
@@ -62,7 +62,7 @@ class MediaControlCard extends React.Component {
                         post_datetime={this.state.currentArticleList[i]["article_datetime"]}
                         post_description={this.state.currentArticleList[i]["article_description"]}
                         image_url={this.state.currentArticleList[i]["article_cover_image_url"]}
-                        post_link="#"
+                        post_link={'blog/'+String(i)}
                     />
                 </Grid>
             )

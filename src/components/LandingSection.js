@@ -79,7 +79,7 @@ export default function MainFeaturedPost(props) {
             <Grid container>
                 <Grid item md={6}>
                     <div className={classes.mainFeaturedPostContent}>
-                        <Typography gutterBottom variant="h4" color="inherit" id="back-to-top-anchor">
+                        <Typography gutterBottom variant="h4" color="inherit">
                             {blog_title}
                         </Typography>
                         <Typography gutterBottom variant="subtitle1" color="inherit">
@@ -91,6 +91,7 @@ export default function MainFeaturedPost(props) {
                                 edge="end"
                                 color="inherit"
                                 href='https://www.linkedin.com/in/a02496104/'
+                                target='_blank'
                             >
                                 <LinkedInIcon/>
                             </IconButton>
@@ -101,6 +102,7 @@ export default function MainFeaturedPost(props) {
                                 edge="end"
                                 color="inherit"
                                 href='https://github.com/yirueilu-b'
+                                target='_blank'
                             >
                                 <GitHubIcon/>
                             </IconButton>

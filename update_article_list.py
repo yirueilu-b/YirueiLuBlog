@@ -9,7 +9,7 @@ import markdown
 
 DESCRIPTION_MAX_LENGTH = 150
 RES_JSON_PATH = os.path.join('src', 'article_list.json')
-ALL_ARTICLE_PATH = glob.glob(os.path.join('public', 'articles', '*.md'))
+ALL_ARTICLE_PATH = glob.glob(os.path.join('src', 'articles', '*.md'))
 ALL_ARTICLE_PATH.sort()
 
 
@@ -62,9 +62,8 @@ if __name__ == '__main__':
         item['article_description'] = get_description(article_parsed)
         item['article_datetime'] = get_datetime(article_path)
         item['article_cover_image_url'] = get_cover_image_url(article_parsed)
+        item['article_md_path'] = get_cover_image_url(article_parsed)
         res_json.append(item)
-        print(item['article_title'])
-        print(item['article_description'])
     res_json.sort(key=lambda x: -x['article_datetime'])
     for i in range(len(res_json)): res_json[i]['article_datetime'] = time.ctime(res_json[i]['article_datetime'])
     res_json = json.dumps(res_json, indent=4)

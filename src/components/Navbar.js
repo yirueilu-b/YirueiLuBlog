@@ -15,6 +15,8 @@ import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Tooltip from '@material-ui/core/Tooltip';
 import Menu from './Menu'
+import {Link} from "react-router-dom";
+import Button from '@material-ui/core/Button';
 
 const Title = "YirueiLu's Blog";
 
@@ -118,17 +120,19 @@ export default function BackToTop(props) {
                     <Toolbar>
                         {/*{props.menu}*/}
                         {/*<Tooltip title="Menu">*/}
-                            {/*<IconButton className={classes.iconButton1}*/}
-                                        {/*edge="end"*/}
-                                        {/*color="default"*/}
-                                        {/*onClick={props.onToggleDark}>*/}
-                                {/*<MenuIcon/>*/}
-                            {/*</IconButton>*/}
+                        {/*<IconButton className={classes.iconButton1}*/}
+                        {/*edge="end"*/}
+                        {/*color="default"*/}
+                        {/*onClick={props.onToggleDark}>*/}
+                        {/*<MenuIcon/>*/}
+                        {/*</IconButton>*/}
                         {/*</Tooltip>*/}
                         <Menu/>
+                        <Button component={Link} to={'/blog'}>
                         <Typography variant="h6">
                             {Title}
                         </Typography>
+                        </Button>
                         <Tooltip
                             title={props.theme.palette.type === "light" ? 'Switch to dark theme' : 'Switch to light theme'}>
                             <IconButton className={classes.iconButton2}
@@ -141,7 +145,7 @@ export default function BackToTop(props) {
                     </Toolbar>
                 </AppBar>
             </HideOnScroll>
-            <Toolbar/>
+            <Toolbar id="back-to-top-anchor"/>
             <ScrollTop {...props}>
                 <Fab color="default" size="small" aria-label="scroll back to top">
                     <KeyboardArrowUpIcon/>
