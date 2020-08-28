@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css",
-    "main.js": "/YirueiLuBlog/static/js/main.34da432c.chunk.js",
-    "main.js.map": "/YirueiLuBlog/static/js/main.34da432c.chunk.js.map",
+    "main.js": "/YirueiLuBlog/static/js/main.f9a45629.chunk.js",
+    "main.js.map": "/YirueiLuBlog/static/js/main.f9a45629.chunk.js.map",
     "runtime-main.js": "/YirueiLuBlog/static/js/runtime-main.4206247f.js",
     "runtime-main.js.map": "/YirueiLuBlog/static/js/runtime-main.4206247f.js.map",
     "static/js/2.815e80e3.chunk.js": "/YirueiLuBlog/static/js/2.815e80e3.chunk.js",
     "static/js/2.815e80e3.chunk.js.map": "/YirueiLuBlog/static/js/2.815e80e3.chunk.js.map",
     "index.html": "/YirueiLuBlog/index.html",
-    "precache-manifest.a86e6afbf4a6fcb098892b9fb2c4450f.js": "/YirueiLuBlog/precache-manifest.a86e6afbf4a6fcb098892b9fb2c4450f.js",
+    "precache-manifest.7f435484dbaa7c305481e01b5986d3e4.js": "/YirueiLuBlog/precache-manifest.7f435484dbaa7c305481e01b5986d3e4.js",
     "service-worker.js": "/YirueiLuBlog/service-worker.js",
     "static/css/main.7cc96115.chunk.css.map": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css.map",
     "static/js/2.815e80e3.chunk.js.LICENSE.txt": "/YirueiLuBlog/static/js/2.815e80e3.chunk.js.LICENSE.txt",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.4206247f.js",
     "static/js/2.815e80e3.chunk.js",
     "static/css/main.7cc96115.chunk.css",
-    "static/js/main.34da432c.chunk.js"
+    "static/js/main.f9a45629.chunk.js"
   ]
 }
