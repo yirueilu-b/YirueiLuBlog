@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css",
-    "main.js": "/YirueiLuBlog/static/js/main.f9a45629.chunk.js",
-    "main.js.map": "/YirueiLuBlog/static/js/main.f9a45629.chunk.js.map",
+    "main.js": "/YirueiLuBlog/static/js/main.e7102cbb.chunk.js",
+    "main.js.map": "/YirueiLuBlog/static/js/main.e7102cbb.chunk.js.map",
     "runtime-main.js": "/YirueiLuBlog/static/js/runtime-main.4206247f.js",
     "runtime-main.js.map": "/YirueiLuBlog/static/js/runtime-main.4206247f.js.map",
-    "static/js/2.815e80e3.chunk.js": "/YirueiLuBlog/static/js/2.815e80e3.chunk.js",
-    "static/js/2.815e80e3.chunk.js.map": "/YirueiLuBlog/static/js/2.815e80e3.chunk.js.map",
+    "static/js/2.6e973042.chunk.js": "/YirueiLuBlog/static/js/2.6e973042.chunk.js",
+    "static/js/2.6e973042.chunk.js.map": "/YirueiLuBlog/static/js/2.6e973042.chunk.js.map",
     "index.html": "/YirueiLuBlog/index.html",
-    "precache-manifest.7f435484dbaa7c305481e01b5986d3e4.js": "/YirueiLuBlog/precache-manifest.7f435484dbaa7c305481e01b5986d3e4.js",
+    "precache-manifest.12e72cf385d60c01c1f33036c93c84cd.js": "/YirueiLuBlog/precache-manifest.12e72cf385d60c01c1f33036c93c84cd.js",
     "service-worker.js": "/YirueiLuBlog/service-worker.js",
     "static/css/main.7cc96115.chunk.css.map": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css.map",
-    "static/js/2.815e80e3.chunk.js.LICENSE.txt": "/YirueiLuBlog/static/js/2.815e80e3.chunk.js.LICENSE.txt",
+    "static/js/2.6e973042.chunk.js.LICENSE.txt": "/YirueiLuBlog/static/js/2.6e973042.chunk.js.LICENSE.txt",
     "static/media/My PyCharm Settings.md": "/YirueiLuBlog/static/media/My PyCharm Settings.27e585ed.md",
     "static/media/Use Python to Build a BTC Auto Trader on Poloniex.md": "/YirueiLuBlog/static/media/Use Python to Build a BTC Auto Trader on Poloniex.3151a62b.md",
     "static/media/yolact.md": "/YirueiLuBlog/static/media/yolact.a13ce874.md",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.4206247f.js",
-    "static/js/2.815e80e3.chunk.js",
+    "static/js/2.6e973042.chunk.js",
     "static/css/main.7cc96115.chunk.css",
-    "static/js/main.f9a45629.chunk.js"
+    "static/js/main.e7102cbb.chunk.js"
   ]
 }
