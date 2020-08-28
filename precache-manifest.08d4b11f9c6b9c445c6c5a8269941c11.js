@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b52bc5bb8077bbdf208336c3b1b67131",
+    "revision": "39583b515b597cd4dfe864e86fb9902b",
     "url": "/YirueiLuBlog/index.html"
   },
   {
-    "revision": "0484113bbda728ccf6e4",
+    "revision": "769858680a6bf9aed9e4",
     "url": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css"
   },
   {
-    "revision": "f4cb87e523f8af47acbe",
-    "url": "/YirueiLuBlog/static/js/2.6e973042.chunk.js"
+    "revision": "e39277d3cc8673c049f2",
+    "url": "/YirueiLuBlog/static/js/2.b65b8b9d.chunk.js"
   },
   {
     "revision": "029cacb393da85609b7166ec787b372d",
-    "url": "/YirueiLuBlog/static/js/2.6e973042.chunk.js.LICENSE.txt"
+    "url": "/YirueiLuBlog/static/js/2.b65b8b9d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0484113bbda728ccf6e4",
-    "url": "/YirueiLuBlog/static/js/main.2a8407e8.chunk.js"
+    "revision": "769858680a6bf9aed9e4",
+    "url": "/YirueiLuBlog/static/js/main.95d17860.chunk.js"
   },
   {
     "revision": "b9dee457e9603ad11efe",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3151a62b426ff45bec643a4899fef919",
     "url": "/YirueiLuBlog/static/media/Use Python to Build a BTC Auto Trader on Poloniex.3151a62b.md"
+  },
+  {
+    "revision": "8a645ee8b124a1f92a7d71bf22ab0f9b",
+    "url": "/YirueiLuBlog/static/media/aaa.8a645ee8.md"
   },
   {
     "revision": "a13ce874f48fcd3f2915df2d71d2eea2",
