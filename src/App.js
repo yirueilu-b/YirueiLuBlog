@@ -74,7 +74,7 @@ class App extends React.Component {
     render() {
         const {classes} = this.props;
         return (
-            <Router basename={process.env.PUBLIC_URL}>
+            <Router>
                 <MuiThemeProvider theme={myTheme}>
                     <CssBaseline/>
                     <Container className={classes.root}>
