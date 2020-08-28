@@ -12,7 +12,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import HomeIcon from '@material-ui/icons/Home';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ClassIcon from '@material-ui/icons/Class';
-import {NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     list: {
@@ -79,7 +79,7 @@ export default function TemporaryDrawer() {
             {/*<Divider/>*/}
             <List>
                 {Object.keys(menu_items).map((key, index) => (
-                    <ListItem button component={NavLink} to={menu_items[key]['link']}  key={key}>
+                    <ListItem button component={Link} to={menu_items[key]['link']}  key={key}>
                         <ListItemIcon>{menu_items[key]['icon']}</ListItemIcon>
                         <ListItemText primary={key}/>
                     </ListItem>

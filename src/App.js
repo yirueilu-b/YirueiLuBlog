@@ -7,7 +7,7 @@ import {withStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container'
 import {unstable_createMuiStrictModeTheme} from '@material-ui/core/styles';
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Switch,
     Route,
 } from "react-router-dom";
