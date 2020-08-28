@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2eaec530450ea814d0aea3dd7fdeea10",
+    "revision": "b52bc5bb8077bbdf208336c3b1b67131",
     "url": "/YirueiLuBlog/index.html"
   },
   {
-    "revision": "d6c6a1ec2b316798b39e",
+    "revision": "0484113bbda728ccf6e4",
     "url": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/YirueiLuBlog/static/js/2.6e973042.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d6c6a1ec2b316798b39e",
-    "url": "/YirueiLuBlog/static/js/main.e7102cbb.chunk.js"
+    "revision": "0484113bbda728ccf6e4",
+    "url": "/YirueiLuBlog/static/js/main.2a8407e8.chunk.js"
   },
   {
     "revision": "b9dee457e9603ad11efe",
