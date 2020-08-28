@@ -62,7 +62,7 @@ if __name__ == '__main__':
         item['article_description'] = get_description(article_parsed)
         item['article_datetime'] = get_datetime(article_path)
         item['article_cover_image_url'] = get_cover_image_url(article_parsed)
-        item['article_md_path'] = get_cover_image_url(article_parsed)
+        item['article_md_path'] = article_path.split(os.sep)[-1].replace('.md', '')
         res_json.append(item)
     res_json.sort(key=lambda x: -x['article_datetime'])
     for i in range(len(res_json)): res_json[i]['article_datetime'] = time.ctime(res_json[i]['article_datetime'])

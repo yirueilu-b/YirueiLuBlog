@@ -62,7 +62,7 @@ class MediaControlCard extends React.Component {
                         post_datetime={this.state.currentArticleList[i]["article_datetime"]}
                         post_description={this.state.currentArticleList[i]["article_description"]}
                         image_url={this.state.currentArticleList[i]["article_cover_image_url"]}
-                        post_link={'blog/'+String(i)}
+                        post_link={'blog/'+ this.state.currentArticleList[i]["article_md_path"]}
                     />
                 </Grid>
             )

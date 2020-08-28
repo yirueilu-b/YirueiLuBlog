@@ -6,11 +6,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import {withStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container'
 import {unstable_createMuiStrictModeTheme} from '@material-ui/core/styles';
-import {
-    HashRouter as Router,
-    Switch,
-    Route,
-} from "react-router-dom";
+import {HashRouter as Router, Switch, Route,} from "react-router-dom";
+import Footer from './components/Footer'
 
 import Navbar from './components/Navbar'
 import LandingSection from './components/LandingSection'
@@ -43,6 +40,7 @@ const useStyles = {
     root: {
         flexGrow: 1,
         maxWidth: '100vw',
+        minHeight: '100vh',
         padding: 0,
         textAlign: 'center',
     },
@@ -78,8 +76,8 @@ class App extends React.Component {
                 <MuiThemeProvider theme={myTheme}>
                     <CssBaseline/>
                     <Container className={classes.root}>
-
                         <Navbar theme={this.state.theme} onToggleDark={this.toggleDarkTheme}/>
+
                         <Switch>
                             <Route exact path="/">
                                 <LandingSection/>
@@ -100,7 +98,7 @@ class App extends React.Component {
                             </Route>
                         </Switch>
 
-
+                        <Footer/>
                     </Container>
                 </MuiThemeProvider>
             </Router>
@@ -109,11 +107,11 @@ class App extends React.Component {
 }
 
 function About() {
-    return <h2 style={{marginTop: '10vh'}}>About</h2>;
+    return <h2 style={{marginTop: '10vh', minHeight: 'calc(90vh - 64px - 164px)'}}>About</h2>;
 }
 
 function Category() {
-    return <h2 style={{marginTop: '10vh'}}>Category</h2>;
+    return <h2 style={{marginTop: '10vh', minHeight: 'calc(90vh - 64px - 164px)'}}>Category</h2>;
 }
 
 export default withStyles(useStyles)(App);

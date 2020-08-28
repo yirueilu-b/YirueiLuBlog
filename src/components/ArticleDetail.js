@@ -1,7 +1,7 @@
 import ReactMarkdown from 'react-markdown'
 import Container from '@material-ui/core/Container'
 import React from "react";
-import {useParams} from "react-router-dom";
+import {useParams, withRouter} from "react-router-dom";
 import {withStyles} from "@material-ui/core";
 
 // import ReactMarkdown from 'react-markdown';
@@ -9,22 +9,21 @@ import {withStyles} from "@material-ui/core";
 const useStyles = {
     root: {
         flexGrow: 1,
-        maxWidth: '60vw',
+        // maxWidth: '',
         padding: 0,
-        textAlign: 'center',
+        textAlign: 'left',
         overflow: 'hidden',
     },
 };
 
-class WhatsNew extends React.Component {
+class Article extends React.Component {
     state = {
         post: null,
     };
 
     componentDidMount() {
-        let file_name = 'Use Python to Build a BTC Auto Trader on Poloniex.md';
-        const markdownPath = require('../articles/' + file_name);
-
+        const file_name = this.props.match.params.file_name;
+        const markdownPath = require('../articles/' + file_name + '.md');
         fetch(markdownPath)
             .then(response => {
                 return response.text()
@@ -45,4 +44,4 @@ class WhatsNew extends React.Component {
     }
 }
 
-export default withStyles(useStyles)(WhatsNew);
+export default withRouter(withStyles(useStyles)(Article));
