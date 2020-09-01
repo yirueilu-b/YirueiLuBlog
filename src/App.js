@@ -15,6 +15,8 @@ import ArticleList from './components/ArticleList'
 import ArticleDetail from './components/ArticleDetail'
 
 const fontFamily = [
+    // '微軟正黑體',
+    // 'Consolas',
     'Roboto',
     '-apple-system',
     'BlinkMacSystemFont',
@@ -29,7 +31,7 @@ const fontFamily = [
 
 let myTheme = unstable_createMuiStrictModeTheme({
     palette: {
-        type: 'dark'
+        type: 'light'
     },
     typography: {
         fontFamily: fontFamily,
