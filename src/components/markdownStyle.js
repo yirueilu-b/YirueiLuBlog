@@ -4,8 +4,19 @@ const useStyles = theme => ({
         minHeight: "90vh",
     },
     article_section: {
-        marginTop: 50,
+        marginTop: 24,
+        marginBottom: 24,
+        borderBottom: `3px solid ${theme.palette.divider}`,
+    },
+    comment_section: {
+        marginTop: 24,
         marginBottom: 100
+    },
+    disqus: {
+        width: "100%",
+        "& a": {
+            color: "rgba(55, 168, 218, 1)"
+        }
     },
     markdown_style: {
         padding: theme.spacing(3),
