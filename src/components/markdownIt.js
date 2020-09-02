@@ -1,7 +1,5 @@
 import katex from '@iktakahiro/markdown-it-katex'
 import hljs from 'highlight.js';
-import anchor from 'markdown-it-anchor'
-import toc from 'markdown-it-table-of-contents'
 
 const md = require('markdown-it')({
     html: true,
@@ -24,7 +22,5 @@ const md = require('markdown-it')({
 });
 
 md.use(katex);
-// md.use(anchor); // Optional, but makes sense as you really want to link to something
-md.use(toc);
 
 export default md
