@@ -11,7 +11,7 @@ import IconButton from '@material-ui/core/IconButton';
 
 
 const blog_title = "YirueiLu's Blog";
-const blog_description = "Some notes about web, machining learning and coding.";
+const blog_description = "Some notes about web applications, machine learning and coding.";
 
 const post = {
     title: 'Title of a longer featured blog post',
@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: 'rgba(0,0,0,.3)',
     },
     mainFeaturedPostContent: {
+        marginTop:theme.spacing(2),
         textAlign: 'left',
         position: 'relative',
         padding: theme.spacing(3),
