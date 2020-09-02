@@ -89,7 +89,7 @@ class App extends React.Component {
                                 <LandingSection/>
                                 <ArticleList/>
                             </Route>
-                            <Route path="/blog/:file_name">
+                            <Route path="/blog/:uuid">
                                 <ArticleDetail/>
                             </Route>
                             <Route exact path="/about">

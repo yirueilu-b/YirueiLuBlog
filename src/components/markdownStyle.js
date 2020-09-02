@@ -1,6 +1,7 @@
 const useStyles = theme => ({
     root: {
         flexGrow: 1,
+        minHeight: "90vh",
     },
     article_section: {
         marginTop: 50,

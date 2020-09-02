@@ -6,6 +6,7 @@ import time
 
 from bs4 import BeautifulSoup
 import markdown
+import uuid
 
 DESCRIPTION_MAX_LENGTH = 150
 RES_JSON_PATH = os.path.join('src', 'article_list.json')
@@ -38,9 +39,8 @@ def get_datetime(path):
 
 def get_cover_image_url(html_parsed):
     try:
-        cover_image = html_parsed.img.attrs['src']
-    except Exception as e:
-        print(e)
+        cover_image = html_parsed.img.attrs['src'].replace('.png', 'l.png')
+    except:
         cover_image = 'https://miro.medium.com/max/3118/1*iwPLQjyFYRTVeQ2cb4S9rA.png'
     return cover_image
 
@@ -54,6 +54,9 @@ def parse_md(path):
 
 
 if __name__ == '__main__':
+    with open(RES_JSON_PATH) as f:
+        exist_data = json.loads(json.load(f))
+    [print(data) for data in exist_data]
     res_json = []
     for article_path in ALL_ARTICLE_PATH:
         article_parsed = parse_md(article_path)
@@ -63,6 +66,11 @@ if __name__ == '__main__':
         item['article_datetime'] = get_datetime(article_path)
         item['article_cover_image_url'] = get_cover_image_url(article_parsed)
         item['article_md_path'] = article_path.split(os.sep)[-1].replace('.md', '')
+        item['uuid'] = uuid.uuid4().hex[:6]
+        for article in exist_data:
+            if item["article_md_path"] == article["article_md_path"]:
+                item['uuid'] = article['uuid']
+                break
         res_json.append(item)
     res_json.sort(key=lambda x: -x['article_datetime'])
     for i in range(len(res_json)): res_json[i]['article_datetime'] = time.ctime(res_json[i]['article_datetime'])
@@ -72,3 +80,4 @@ if __name__ == '__main__':
 
     with open(RES_JSON_PATH) as f:
         data = json.load(f)
+    print(data)

@@ -8,6 +8,7 @@ import 'highlight.js/styles/darcula.css';
 
 import useStyles from './markdownStyle'
 import md from './markdownIt'
+import article_list from '../article_list.json'
 
 class Article extends React.Component {
     state = {
@@ -15,7 +16,8 @@ class Article extends React.Component {
     };
 
     componentDidMount() {
-        const file_name = this.props.match.params.file_name;
+        const articleList = JSON.parse(article_list);
+        const file_name = articleList.filter(article => article['uuid'] === this.props.match.params.uuid)[0]['article_md_path'];
         const markdownPath = require('../articles/' + file_name + '.md');
         fetch(markdownPath)
             .then(response => {
