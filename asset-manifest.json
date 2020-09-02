@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css",
-    "main.js": "/YirueiLuBlog/static/js/main.87e57f20.chunk.js",
-    "main.js.map": "/YirueiLuBlog/static/js/main.87e57f20.chunk.js.map",
+    "main.js": "/YirueiLuBlog/static/js/main.e0b8d14a.chunk.js",
+    "main.js.map": "/YirueiLuBlog/static/js/main.e0b8d14a.chunk.js.map",
     "runtime-main.js": "/YirueiLuBlog/static/js/runtime-main.4206247f.js",
     "runtime-main.js.map": "/YirueiLuBlog/static/js/runtime-main.4206247f.js.map",
     "static/css/2.9f6b16ab.chunk.css": "/YirueiLuBlog/static/css/2.9f6b16ab.chunk.css",
-    "static/js/2.26b0c349.chunk.js": "/YirueiLuBlog/static/js/2.26b0c349.chunk.js",
-    "static/js/2.26b0c349.chunk.js.map": "/YirueiLuBlog/static/js/2.26b0c349.chunk.js.map",
+    "static/js/2.c11bf8ee.chunk.js": "/YirueiLuBlog/static/js/2.c11bf8ee.chunk.js",
+    "static/js/2.c11bf8ee.chunk.js.map": "/YirueiLuBlog/static/js/2.c11bf8ee.chunk.js.map",
     "index.html": "/YirueiLuBlog/index.html",
-    "precache-manifest.f6b59d4f04437717df7e425a70fb0aff.js": "/YirueiLuBlog/precache-manifest.f6b59d4f04437717df7e425a70fb0aff.js",
+    "precache-manifest.b4c71ad293fc47b2714d2796cfbe3dd0.js": "/YirueiLuBlog/precache-manifest.b4c71ad293fc47b2714d2796cfbe3dd0.js",
     "service-worker.js": "/YirueiLuBlog/service-worker.js",
     "static/css/2.9f6b16ab.chunk.css.map": "/YirueiLuBlog/static/css/2.9f6b16ab.chunk.css.map",
     "static/css/main.7cc96115.chunk.css.map": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css.map",
-    "static/js/2.26b0c349.chunk.js.LICENSE.txt": "/YirueiLuBlog/static/js/2.26b0c349.chunk.js.LICENSE.txt",
+    "static/js/2.c11bf8ee.chunk.js.LICENSE.txt": "/YirueiLuBlog/static/js/2.c11bf8ee.chunk.js.LICENSE.txt",
     "static/media/My PyCharm Settings.md": "/YirueiLuBlog/static/media/My PyCharm Settings.27e585ed.md",
     "static/media/Use Python to Build a BTC Auto Trader on Poloniex.md": "/YirueiLuBlog/static/media/Use Python to Build a BTC Auto Trader on Poloniex.3151a62b.md",
     "static/media/aaa.md": "/YirueiLuBlog/static/media/aaa.8a645ee8.md",
@@ -24,8 +24,8 @@
   "entrypoints": [
     "static/js/runtime-main.4206247f.js",
     "static/css/2.9f6b16ab.chunk.css",
-    "static/js/2.26b0c349.chunk.js",
+    "static/js/2.c11bf8ee.chunk.js",
     "static/css/main.7cc96115.chunk.css",
-    "static/js/main.87e57f20.chunk.js"
+    "static/js/main.e0b8d14a.chunk.js"
   ]
 }
