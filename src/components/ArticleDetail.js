@@ -11,30 +11,28 @@ import md from './markdownIt'
 import article_list from '../article_list.json'
 import Disqus from "disqus-react"
 
+const articleList = JSON.parse(article_list);
+
 
 class Article extends React.Component {
-    state = {
-        markdownHTML: null,
-        disqusShortname: "yirueilublog",
-        disqusConfig: {
-            url: "",
-            identifier: "",
-            title: "",
-        }
-    };
+    constructor() {
+        super();
+        this.state = {
+            markdownHTML: null,
+            disqusShortname: "",
+            disqusConfig: {
+                url: "",
+                identifier: "",
+                title: "",
+            }
+        };
+        this.getDisqusInfo = this.getDisqusInfo.bind(this);
+    }
 
     componentDidMount() {
-        const articleList = JSON.parse(article_list);
         const article_info = articleList.filter(article => article['uuid'] === this.props.match.params.uuid)[0];
+        this.getDisqusInfo(article_info);
         const file_name = article_info['article_md_path'];
-        this.setState({
-                disqusConfig: {
-                    url: window.location.href,
-                    identifier: article_info['uuid'],
-                    title: article_info['article_title'],
-                }
-            }
-        );
         const markdownPath = require('../articles/' + file_name + '.md');
         fetch(markdownPath)
             .then(response => {
@@ -46,9 +44,20 @@ class Article extends React.Component {
             });
     }
 
+    getDisqusInfo(article_info) {
+        this.setState({
+                disqusConfig: {
+                    url: "https://yirueilu-b.github.io/YirueiLuBlog/#/blog/" + article_info['uuid'],
+                    identifier: article_info['uuid'],
+                    title: article_info['article_title'],
+                },
+                disqusShortname: "yirueilublog",
+            }
+        );
+    }
+
     render() {
         const {classes} = this.props;
-        console.log(this.state.disqusConfig);
         return (
             <Container className={classes.root}>
                 <Grid
@@ -75,12 +84,16 @@ class Article extends React.Component {
                           md={9}
                           className={classes.comment_section}
                     >
-                        <Disqus.DiscussionEmbed
-                            className={classes.disqus}
-                            shortname={this.state.disqusShortname}
-                            config={this.state.disqusConfig}
-                        />
+                        {this.state.disqusShortname === '' ?
+                            null
+                            :
+                            <Disqus.DiscussionEmbed
+                                className={classes.disqus}
+                                shortname={this.state.disqusShortname}
+                                config={this.state.disqusConfig}
+                            />}
                     </Grid>
+                    {this.state.disqusConfig.url + this.state.disqusConfig.identifier + this.state.disqusConfig.title}
                 </Grid>
             </Container>
         );
