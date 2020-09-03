@@ -9,29 +9,18 @@ import 'highlight.js/styles/darcula.css';
 import useStyles from './markdownStyle'
 import md from './markdownIt'
 import article_list from '../article_list.json'
-import Disqus from "disqus-react"
 
 const articleList = JSON.parse(article_list);
-
 
 class Article extends React.Component {
     constructor() {
         super();
         this.state = {
             markdownHTML: null,
-            disqusShortname: "",
-            disqusConfig: {
-                url: "",
-                identifier: "",
-                title: "",
-            }
         };
-        this.getDisqusInfo = this.getDisqusInfo.bind(this);
     }
-
     componentDidMount() {
         const article_info = articleList.filter(article => article['uuid'] === this.props.match.params.uuid)[0];
-        this.getDisqusInfo(article_info);
         const file_name = article_info['article_md_path'];
         const markdownPath = require('../articles/' + file_name + '.md');
         fetch(markdownPath)
@@ -42,18 +31,16 @@ class Article extends React.Component {
                 let markdownHTML = md.render(text);
                 this.setState({markdownHTML: markdownHTML});
             });
-    }
-
-    getDisqusInfo(article_info) {
-        this.setState({
-                disqusConfig: {
-                    url: "https://yirueilu-b.github.io/YirueiLuBlog/#/blog/" + article_info['uuid'],
-                    identifier: article_info['uuid'],
-                    title: article_info['article_title'],
-                },
-                disqusShortname: "yirueilublog",
-            }
-        );
+        // comment info
+        let script = document.createElement("script");
+        let anchor = document.getElementById("inject-comments-for-uterances");
+        script.setAttribute("src", "https://utteranc.es/client.js");
+        script.setAttribute("crossorigin", "anonymous");
+        script.setAttribute("async", true);
+        script.setAttribute("repo", "yirueilu-b/YirueiLuBlog");
+        script.setAttribute("issue-term", article_info['uuid']);
+        script.setAttribute("theme", this.props.theme.palette.type === 'dark' ? "github-dark": "github-light");
+        anchor.appendChild(script);
     }
 
     render() {
@@ -84,16 +71,9 @@ class Article extends React.Component {
                           md={9}
                           className={classes.comment_section}
                     >
-                        {this.state.disqusShortname === '' ?
-                            null
-                            :
-                            <Disqus.DiscussionEmbed
-                                className={classes.disqus}
-                                shortname={this.state.disqusShortname}
-                                config={this.state.disqusConfig}
-                            />}
+                        <div className={classes.disqus} id="inject-comments-for-uterances">
+                        </div>
                     </Grid>
-                    {this.state.disqusConfig.url + this.state.disqusConfig.identifier + this.state.disqusConfig.title}
                 </Grid>
             </Container>
         );

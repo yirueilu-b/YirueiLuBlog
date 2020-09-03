@@ -69,6 +69,12 @@ class App extends React.Component {
             },
         });
         this.setState({theme: myTheme});
+        const message = {
+            type: 'set-theme',
+            theme: this.state.theme.palette.type === 'light' ? "github-dark": "github-light"
+        };
+        let utterances = document.querySelector('iframe');
+        utterances.contentWindow.postMessage(message, 'https://utteranc.es');
     };
 
     render() {
@@ -90,7 +96,7 @@ class App extends React.Component {
                                 <ArticleList/>
                             </Route>
                             <Route path="/blog/:uuid">
-                                <ArticleDetail/>
+                                <ArticleDetail theme={this.state.theme}/>
                             </Route>
                             <Route exact path="/about">
                                 <About/>
