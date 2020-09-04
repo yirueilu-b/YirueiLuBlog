@@ -29,10 +29,10 @@ const useStyles = theme => ({
             marginBottom: 20,
             // marginLeft: 'auto',
             // marginRight: 'auto',
-            width: '100%',
-            [theme.breakpoints.up('sm')]: {
-                width: '50%',
-            },
+            // width: '80%',
+            // [theme.breakpoints.up('sm')]: {
+            //     width: '100%',
+            // },
         },
         "& .katex": {
             display: 'inline-block',
@@ -75,14 +75,12 @@ const useStyles = theme => ({
                     'rgba(0, 0, 0, 0.1)' :
                     'rgba(255, 255, 255, 0.1)',
                 fontSize: '.85em',
-                borderRadius: 2,
             },
             '& code[class*="language-"]': {
                 backgroundColor: '#272c34',
                 color: '#fff',
                 // Avoid layout jump after hydration (style injected by prism)
                 lineHeight: 1.5,
-
             }
         },
 
@@ -128,11 +126,20 @@ const useStyles = theme => ({
         '& ul': {
             paddingLeft: 30,
         },
-        '& h1, & h2, & h3, & h4': {
+        '& h1, & h2, & h3, & h4, & h5, & h6': {
             fontWeight: theme.typography.fontWeightBold,
             '& code': {
-                fontSize: 'inherit',
-                lineHeight: 'inherit',
+                direction: 'ltr',
+                lineHeight: 1.4,
+                display: 'inline-block',
+                fontFamily: 'Consolas, "Liberation Mono", Menlo, Courier, monospace',
+                WebkitFontSmoothing: 'subpixel-antialiased',
+                padding: '2px 6px',
+                color: theme.palette.text.primary,
+                backgroundColor: theme.palette.type === 'light' ?
+                    'rgba(0, 0, 0, 0.1)' :
+                    'rgba(255, 255, 255, 0.1)',
+                fontSize: '.85em',
                 // Remove scroll on small screens.
                 wordBreak: 'break-all',
             },

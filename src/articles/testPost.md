@@ -1,8 +1,6 @@
 # Markdown: Syntax
 
-This test markdown file is from https://github.com/mxstbr/markdown-test-file and create by mxstbr
-
-Big thanks for sharing this file
+This markdown test file is from https://github.com/mxstbr/markdown-test-file and create by mxstbr
 
 *   [Overview](#overview)
     *   [Philosophy](#philosophy)
@@ -115,8 +113,9 @@ and code blocks:
 > 2.   This is the second list item.
 > 
 > Here's some example code:
-> 
+>     
 >     return shell_exec("echo $input | $markdown_script");
+>     
 
 Any decent text editor should make email-style quoting easy. For
 example, with BBEdit, you can make a selection and choose Increase
@@ -312,3 +311,14 @@ Unlike a pre-formatted code block, a code span indicates code within a
 normal paragraph. For example:
 
 Use the `printf()` function.
+
+> ### Comment with code
+> 
+> 
+> Here's some example code:
+>     
+>     def test_my_highlight(is_highlight):
+>          if is_highlight == False:
+>               return "oh no!"
+>          else:
+>               return "great!"
