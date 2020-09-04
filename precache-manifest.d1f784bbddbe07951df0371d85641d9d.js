@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "768a1b87269d07d9998759eef00f50c6",
+    "revision": "aea07278e388f13401fb14f349587686",
     "url": "/YirueiLuBlog/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/YirueiLuBlog/static/css/2.9f6b16ab.chunk.css"
   },
   {
-    "revision": "ff94d2a20414bf53509e",
+    "revision": "935e835d4ea6e863ed0f",
     "url": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css"
   },
   {
@@ -20,19 +20,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/YirueiLuBlog/static/js/2.bd6d16fa.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ff94d2a20414bf53509e",
-    "url": "/YirueiLuBlog/static/js/main.32686dc9.chunk.js"
+    "revision": "935e835d4ea6e863ed0f",
+    "url": "/YirueiLuBlog/static/js/main.a56d91c6.chunk.js"
   },
   {
     "revision": "b9dee457e9603ad11efe",
     "url": "/YirueiLuBlog/static/js/runtime-main.4206247f.js"
   },
   {
-    "revision": "6fd37aafddc1144a9d15b9ee2588c6da",
-    "url": "/YirueiLuBlog/static/media/testPost.6fd37aaf.md"
+    "revision": "be192f2b065dcf076366c8a439515c9f",
+    "url": "/YirueiLuBlog/static/media/testPost.be192f2b.md"
   },
   {
-    "revision": "286295f92e5698d3823c491194668e31",
-    "url": "/YirueiLuBlog/static/media/utterancesComment.286295f9.md"
+    "revision": "3cfaba3f9520181bf38a172ae2735c44",
+    "url": "/YirueiLuBlog/static/media/utterancesComment.3cfaba3f.md"
   }
 ]);

@@ -10,7 +10,7 @@ Finally got my comment system works with Utterances. It's a lightweight comments
 
 Installing Utterances is super simple, just need few clicks and everything is done.
 
-- Install the Utterances Github App for letting Utterances access your repository.
+- Install the Utterances Github App to let the Utterances bot access your repository.
 
     [Install Utterances Github App here](https://github.com/apps/utterances)
 
