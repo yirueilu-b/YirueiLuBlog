@@ -15,14 +15,19 @@ ALL_ARTICLE_PATH.sort()
 
 
 def get_title(html_parsed):
-    title = html_parsed.h1.text
-    return title
-
+    try:
+        title = html_parsed.h1.text
+        return title
+    except:
+        return ""
 
 def get_description(html_parsed):
-    all_text = ''.join([x.text for x in html_parsed.find_all('p')])
-    description = all_text[:DESCRIPTION_MAX_LENGTH]
-    return description
+    try:
+        all_text = ''.join([x.text for x in html_parsed.find_all('p')])
+        description = all_text[:DESCRIPTION_MAX_LENGTH]
+        return description
+    except:
+        return ""
 
 
 def get_datetime(path):
