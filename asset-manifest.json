@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css",
-    "main.js": "/YirueiLuBlog/static/js/main.cc48c5dc.chunk.js",
-    "main.js.map": "/YirueiLuBlog/static/js/main.cc48c5dc.chunk.js.map",
+    "main.js": "/YirueiLuBlog/static/js/main.a8cc440e.chunk.js",
+    "main.js.map": "/YirueiLuBlog/static/js/main.a8cc440e.chunk.js.map",
     "runtime-main.js": "/YirueiLuBlog/static/js/runtime-main.4206247f.js",
     "runtime-main.js.map": "/YirueiLuBlog/static/js/runtime-main.4206247f.js.map",
     "static/css/2.9f6b16ab.chunk.css": "/YirueiLuBlog/static/css/2.9f6b16ab.chunk.css",
     "static/js/2.28f4bd68.chunk.js": "/YirueiLuBlog/static/js/2.28f4bd68.chunk.js",
     "static/js/2.28f4bd68.chunk.js.map": "/YirueiLuBlog/static/js/2.28f4bd68.chunk.js.map",
     "index.html": "/YirueiLuBlog/index.html",
-    "precache-manifest.0577c94cb5935cdffa2a620a21fce954.js": "/YirueiLuBlog/precache-manifest.0577c94cb5935cdffa2a620a21fce954.js",
+    "precache-manifest.b0fb649012020be2af44e0090c324fc6.js": "/YirueiLuBlog/precache-manifest.b0fb649012020be2af44e0090c324fc6.js",
     "service-worker.js": "/YirueiLuBlog/service-worker.js",
     "static/css/2.9f6b16ab.chunk.css.map": "/YirueiLuBlog/static/css/2.9f6b16ab.chunk.css.map",
     "static/css/main.7cc96115.chunk.css.map": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css.map",
@@ -23,6 +23,6 @@
     "static/css/2.9f6b16ab.chunk.css",
     "static/js/2.28f4bd68.chunk.js",
     "static/css/main.7cc96115.chunk.css",
-    "static/js/main.cc48c5dc.chunk.js"
+    "static/js/main.a8cc440e.chunk.js"
   ]
 }
