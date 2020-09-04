@@ -42,7 +42,7 @@ I use `creat-react-app` to build the blog and use the `hash-router` in `react-ro
 
 The parameters after `#` would be ignored and Utterances bot will reference `url` or `path` to the root/base URL and all posts will load the same comments.
 
-Therefore, at the `issue-term` attribute, we must provide an unique ID of the post `UNIQUE_ID` so that the Utterances bot could reference to each posts independently.
+Therefore, at the `issue-term` attribute, we must provide an unique ID of the post `UNIQUE_ID` so that the Utterances bot could reference to each posts and create issue independently.
 
 - After loading the scripts, the comments are now ready to be rendered as below.
 
