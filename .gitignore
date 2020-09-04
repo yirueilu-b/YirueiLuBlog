@@ -24,4 +24,4 @@ yarn-error.log*
 
 venv
 .idea
-./src/articles
+src/articles
