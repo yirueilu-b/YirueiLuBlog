@@ -6,13 +6,15 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import {withStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container'
 import {unstable_createMuiStrictModeTheme} from '@material-ui/core/styles';
-import {HashRouter as Router, Switch, Route,} from "react-router-dom";
+import {HashRouter as Router, Switch, Route} from "react-router-dom";
 import Footer from './components/Footer'
 
 import Navbar from './components/Navbar'
 import LandingSection from './components/LandingSection'
 import ArticleList from './components/ArticleList'
 import ArticleDetail from './components/ArticleDetail'
+import About from './components/About'
+import Category from './components/Category'
 
 const fontFamily = [
     // '微軟正黑體',
@@ -71,13 +73,16 @@ class App extends React.Component {
         this.setState({theme: myTheme});
         const message = {
             type: 'set-theme',
-            theme: this.state.theme.palette.type === 'light' ? "github-dark": "github-light"
+            theme: this.state.theme.palette.type === 'light' ? "github-dark" : "github-light"
         };
         let utterances = document.querySelector('iframe');
-        utterances.contentWindow.postMessage(message, 'https://utteranc.es');
+        if(utterances){
+            utterances.contentWindow.postMessage(message, 'https://utteranc.es');
+        }
     };
 
     render() {
+
         const {classes} = this.props;
         return (
             <Router>
@@ -114,13 +119,6 @@ class App extends React.Component {
     }
 }
 
-function About() {
-    return <h2 style={{marginTop: '10vh', minHeight: 'calc(90vh - 64px - 164px)'}}>About</h2>;
-}
-
-function Category() {
-    return <h2 style={{marginTop: '10vh', minHeight: 'calc(90vh - 64px - 164px)'}}>Category</h2>;
-}
 
 export default withStyles(useStyles)(App);
 

@@ -9,8 +9,10 @@ import 'highlight.js/styles/darcula.css';
 import useStyles from './markdownStyle'
 import md from './markdownIt'
 import article_list from '../article_list.json'
+import ScrollToTopOnMount from './ScrollTopOnMount'
 
 const articleList = JSON.parse(article_list);
+
 
 class Article extends React.Component {
     constructor() {
@@ -39,7 +41,7 @@ class Article extends React.Component {
         script.setAttribute("async", true);
         script.setAttribute("repo", "yirueilu-b/YirueiLuBlog");
         script.setAttribute("issue-term", article_info['uuid']);
-        script.setAttribute("theme", this.props.theme.palette.type === 'dark' ? "github-dark": "github-light");
+        script.setAttribute("theme", this.props.theme.palette.type === 'dark' ? "github-dark" : "github-light");
         anchor.appendChild(script);
     }
 
@@ -47,6 +49,7 @@ class Article extends React.Component {
         const {classes} = this.props;
         return (
             <Container className={classes.root}>
+                <ScrollToTopOnMount/>
                 <Grid
                     container
                     spacing={0}

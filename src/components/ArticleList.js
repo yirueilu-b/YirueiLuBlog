@@ -5,6 +5,7 @@ import ArticleCard from './ArticleCard'
 import Grid from '@material-ui/core/Grid';
 import article_list from '../article_list.json'
 import Pagination from '@material-ui/lab/Pagination';
+import ScrollToTopOnMount from './ScrollTopOnMount'
 
 const ARTICLE_PER_PAGE = 5;
 
@@ -39,14 +40,15 @@ class MediaControlCard extends React.Component {
     componentDidMount() {
         let articleList = JSON.parse(article_list);
         this.setState({articleList: articleList});
-        let start_point = ARTICLE_PER_PAGE*(this.state.current_page-1);
+        let start_point = ARTICLE_PER_PAGE * (this.state.current_page - 1);
         let end_point = start_point + ARTICLE_PER_PAGE;
         this.setState({currentArticleList: articleList.slice(start_point, end_point)});
     }
 
     handlePageChange = (event, value) => {
+        window.scrollTo(0, 0, {behavior: 'smooth', block: 'end'});
         this.setState({current_page: value});
-        let start_point = ARTICLE_PER_PAGE*(value-1);
+        let start_point = ARTICLE_PER_PAGE * (value - 1);
         let end_point = start_point + ARTICLE_PER_PAGE;
         this.setState({currentArticleList: this.state.articleList.slice(start_point, end_point)});
     };
@@ -63,7 +65,7 @@ class MediaControlCard extends React.Component {
                         post_description={this.state.currentArticleList[i]["article_description"]}
                         image_url={this.state.currentArticleList[i]["article_cover_image_url"]}
                         // post_link={'blog/'+ this.state.currentArticleList[i]["article_md_path"]}
-                        post_link={'blog/'+ this.state.currentArticleList[i]["uuid"]}
+                        post_link={'blog/' + this.state.currentArticleList[i]["uuid"]}
                     />
                 </Grid>
             )
@@ -71,6 +73,8 @@ class MediaControlCard extends React.Component {
 
         return (
             <Container className={classes.root}>
+
+                <ScrollToTopOnMount/>
                 <Grid
                     container
                     spacing={0}

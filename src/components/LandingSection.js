@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        height: 287,
+        height: 287+87,
     },
     overlay: {
         position: 'absolute',
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: 'rgba(0,0,0,.3)',
     },
     mainFeaturedPostContent: {
-        marginTop:theme.spacing(2),
+        marginTop:theme.spacing(4),
         textAlign: 'left',
         position: 'relative',
         padding: theme.spacing(3),
@@ -78,7 +78,7 @@ export default function MainFeaturedPost(props) {
             {<img style={{display: 'none'}} src={post.image} alt='imageText'/>}
             <div className={classes.overlay}/>
             <Grid container>
-                <Grid item md={6}>
+                <Grid item md={8}>
                     <div className={classes.mainFeaturedPostContent}>
                         <Typography gutterBottom variant="h4" color="inherit">
                             {blog_title}

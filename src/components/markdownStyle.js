@@ -37,7 +37,8 @@ const useStyles = theme => ({
         "& .katex": {
             display: 'inline-block',
             maxWidth: '100%',
-            overflowX: 'scroll',
+            overflowX: 'auto',
+            WebkitOverflowScrolling: 'touch', // iOS momentum scrolling.
             verticalAlign: 'middle',
         },
         // material ui css
@@ -53,7 +54,7 @@ const useStyles = theme => ({
             padding: theme.spacing(2),
             direction: 'ltr',
             // borderRadius: theme.sh.borderRadius,
-            overflow: 'auto',
+            overflowX: 'auto',
             WebkitOverflowScrolling: 'touch', // iOS momentum scrolling.
             maxWidth: 'calc(100vw - 32px)',
             [theme.breakpoints.up('md')]: {
@@ -64,6 +65,10 @@ const useStyles = theme => ({
         // inline code
         '& p': {
             '& code': {
+                verticalAlign: 'middle',
+                // whiteSpace: 'pre',
+                overflowX: 'auto',
+                WebkitOverflowScrolling: 'touch', // iOS momentum scrolling.
                 direction: 'ltr',
                 lineHeight: 1.4,
                 display: 'inline-block',
@@ -77,6 +82,9 @@ const useStyles = theme => ({
                 fontSize: '.85em',
             },
             '& code[class*="language-"]': {
+                // whiteSpace: 'pre',
+                overflowX: 'auto',
+                WebkitOverflowScrolling: 'touch', // iOS momentum scrolling.
                 backgroundColor: '#272c34',
                 color: '#fff',
                 // Avoid layout jump after hydration (style injected by prism)
@@ -86,7 +94,10 @@ const useStyles = theme => ({
 
         // code blocks
         '& pre code': {
-            fontSize: '1em',
+            // fontSize: '1em',
+            // whiteSpace: 'pre',
+            // overflowX: 'auto',
+            // WebkitOverflowScrolling: 'touch', // iOS momentum scrolling.
         },
         '& .token.operator': {
             background: 'transparent',
@@ -129,6 +140,9 @@ const useStyles = theme => ({
         '& h1, & h2, & h3, & h4, & h5, & h6': {
             fontWeight: theme.typography.fontWeightBold,
             '& code': {
+                // whiteSpace: 'pre',
+                overflowX: 'auto',
+                WebkitOverflowScrolling: 'touch', // iOS momentum scrolling.
                 direction: 'ltr',
                 lineHeight: 1.4,
                 display: 'inline-block',
@@ -141,7 +155,7 @@ const useStyles = theme => ({
                     'rgba(255, 255, 255, 0.1)',
                 fontSize: '.85em',
                 // Remove scroll on small screens.
-                wordBreak: 'break-all',
+                // wordBreak: 'break-all',
             },
             '& .anchor-link-style': {
                 // To prevent the link to get the focus.

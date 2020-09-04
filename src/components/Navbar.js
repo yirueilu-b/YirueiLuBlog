@@ -128,7 +128,7 @@ export default function BackToTop(props) {
                         {/*</IconButton>*/}
                         {/*</Tooltip>*/}
                         <Menu/>
-                        <Button component={Link} to={'/blog'}>
+                        <Button component={Link} to={'/'} onClick={() =>  window.scrollTo(0, 0)}>
                         <Typography variant="h6">
                             {Title}
                         </Typography>
