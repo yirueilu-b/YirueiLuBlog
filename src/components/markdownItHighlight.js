@@ -28,7 +28,7 @@ const highlightAuto = (code, lang) =>
 const wrap = render =>
     function (...args) {
         return render.apply(this, args)
-            .replace('<code>', '<code class="hljs"> ')
+            .replace('<code>', '<code class="hljs">')
             // .replace('<pre>', '<pre>')
     };
 

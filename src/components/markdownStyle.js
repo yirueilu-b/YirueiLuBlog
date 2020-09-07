@@ -19,11 +19,9 @@ const useStyles = theme => ({
         }
     },
     markdown_style: {
-        lineHeight:'1.5em',
         padding: theme.spacing(3),
         maxWidth: "100%",
         textAlign: 'left',
-        wordWrap: "break-word",
         "& img": {
             display: 'block',
             marginTop: 20,
@@ -45,6 +43,7 @@ const useStyles = theme => ({
         // material ui css
         ...theme.typography.body1,
         color: theme.palette.text.primary,
+        wordBreak: 'break-word',
         '& .anchor-link': {
             marginTop: -96, // Offset for the anchor.
             position: 'absolute',
@@ -69,20 +68,10 @@ const useStyles = theme => ({
                 backgroundColor: theme.palette.type === 'light' ?
                     'rgba(0, 0, 0, 0.1)' :
                     'rgba(255, 255, 255, 0.1)',
-                    'rgba(0, 0, 0, 0.1)' :
-                    'rgba(255, 255, 255, 0.1)',
                 fontSize: '.85em',
                 lineHeight: 'inherit',
                 wordBreak: 'break-all',
             },
-            '& code[class*="language-"]': {
-                overflowX: 'auto',
-                WebkitOverflowScrolling: 'touch', // iOS momentum scrolling.
-                backgroundColor: '#272c34',
-                color: '#fff',
-                // Avoid layout jump after hydration (style injected by prism)
-                lineHeight: 1.5,
-            }
         },
         '& .hljs': {
             whiteSpace: 'pre !important',
