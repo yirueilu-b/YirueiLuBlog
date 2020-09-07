@@ -1,28 +1,27 @@
 {
   "files": {
     "main.css": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css",
-    "main.js": "/YirueiLuBlog/static/js/main.1002404d.chunk.js",
-    "main.js.map": "/YirueiLuBlog/static/js/main.1002404d.chunk.js.map",
+    "main.js": "/YirueiLuBlog/static/js/main.3102e8ac.chunk.js",
+    "main.js.map": "/YirueiLuBlog/static/js/main.3102e8ac.chunk.js.map",
     "runtime-main.js": "/YirueiLuBlog/static/js/runtime-main.4206247f.js",
     "runtime-main.js.map": "/YirueiLuBlog/static/js/runtime-main.4206247f.js.map",
     "static/css/2.9f6b16ab.chunk.css": "/YirueiLuBlog/static/css/2.9f6b16ab.chunk.css",
-    "static/js/2.28f4bd68.chunk.js": "/YirueiLuBlog/static/js/2.28f4bd68.chunk.js",
-    "static/js/2.28f4bd68.chunk.js.map": "/YirueiLuBlog/static/js/2.28f4bd68.chunk.js.map",
+    "static/js/2.6821a82d.chunk.js": "/YirueiLuBlog/static/js/2.6821a82d.chunk.js",
+    "static/js/2.6821a82d.chunk.js.map": "/YirueiLuBlog/static/js/2.6821a82d.chunk.js.map",
     "index.html": "/YirueiLuBlog/index.html",
-    "precache-manifest.bee1dbb2aa45fc01903cb3da45d128b8.js": "/YirueiLuBlog/precache-manifest.bee1dbb2aa45fc01903cb3da45d128b8.js",
+    "precache-manifest.fc9d11dab31d0a901e257a6bbb220304.js": "/YirueiLuBlog/precache-manifest.fc9d11dab31d0a901e257a6bbb220304.js",
     "service-worker.js": "/YirueiLuBlog/service-worker.js",
     "static/css/2.9f6b16ab.chunk.css.map": "/YirueiLuBlog/static/css/2.9f6b16ab.chunk.css.map",
     "static/css/main.7cc96115.chunk.css.map": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css.map",
-    "static/js/2.28f4bd68.chunk.js.LICENSE.txt": "/YirueiLuBlog/static/js/2.28f4bd68.chunk.js.LICENSE.txt",
-    "static/media/crawlTWStockData.md": "/YirueiLuBlog/static/media/crawlTWStockData.fe5cd97a.md",
+    "static/js/2.6821a82d.chunk.js.LICENSE.txt": "/YirueiLuBlog/static/js/2.6821a82d.chunk.js.LICENSE.txt",
     "static/media/testPost.md": "/YirueiLuBlog/static/media/testPost.be192f2b.md",
     "static/media/utterancesComment.md": "/YirueiLuBlog/static/media/utterancesComment.0155e595.md"
   },
   "entrypoints": [
     "static/js/runtime-main.4206247f.js",
     "static/css/2.9f6b16ab.chunk.css",
-    "static/js/2.28f4bd68.chunk.js",
+    "static/js/2.6821a82d.chunk.js",
     "static/css/main.7cc96115.chunk.css",
-    "static/js/main.1002404d.chunk.js"
+    "static/js/main.3102e8ac.chunk.js"
   ]
 }
