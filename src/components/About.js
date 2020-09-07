@@ -3,27 +3,56 @@ import {withStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid';
 import ScrollToTopOnMount from './ScrollTopOnMount'
+import Typography from '@material-ui/core/Typography';
 
 
 const useStyles = theme => ({
     root: {
         display: 'flex',
-        marginTop: '10vh',
-        marginBottom: '10vh',
-        // minHeight: 800,
+        padding: 0
     },
+    content: {
+        [theme.breakpoints.up('sm')]: {
+            paddingLeft: '10vw',
+            paddingRight: '10vw',
+        },
+        // backgroundColor: theme.palette.background.paper,
+    },
+    profile: {
+        "& h4":{
+            padding: 24
+        },
+        height: '100vh',
+        backgroundColor: 'rgba(55, 168, 218, 0.1)',
+    },
+    experience: {
+        "& h4":{
+            padding: 24
+        },
+        height: '100vh',
+        backgroundColor: 'rgba(0, 0, 0, 0.1)',
+        // backgroundColor: theme.palette.background.paper,
+    },
+    project: {
+        "& h4":{
+            padding: 24
+        },
+        height: '100vh',
+        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        // backgroundColor: theme.palette.background.paper,
+    }
 });
 
 
 class About extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-        };
+        this.state = {};
     }
 
     componentDidMount() {
     }
+
 
     render() {
         const {classes} = this.props;
@@ -32,14 +61,21 @@ class About extends React.Component {
             <Container className={classes.root}>
                 <ScrollToTopOnMount/>
                 <Grid
+                    className={classes.content}
                     container
                     spacing={0}
                     direction="row"
                     alignItems="flex-start"
                     justify="center"
                 >
-                    <Grid container item xs={12} md={9} justify="center">
-                        <h1>About</h1>
+                    <Grid className={classes.profile} container item xs={12} justify="flex-start">
+                        <Typography variant='h4'>Profile</Typography>
+                    </Grid>
+                    <Grid className={classes.experience} container item xs={12} justify="flex-start">
+                        <Typography variant='h4'>Experiences</Typography>
+                    </Grid>
+                    <Grid className={classes.project} container item xs={12} justify="flex-start">
+                        <Typography variant='h4'>Projects</Typography>
                     </Grid>
                 </Grid>
 
@@ -47,5 +83,6 @@ class About extends React.Component {
         );
     }
 }
+
 
 export default withStyles(useStyles)(About);
