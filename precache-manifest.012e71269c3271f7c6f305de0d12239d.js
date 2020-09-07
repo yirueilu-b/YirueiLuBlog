@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1b43093e6015ebd166f2d7d4b6907fd6",
+    "revision": "2964e4c3c99cd7ae86d89f63ad573a73",
     "url": "/YirueiLuBlog/index.html"
   },
   {
-    "revision": "cb38b636a5ed625d1cd0",
-    "url": "/YirueiLuBlog/static/css/2.9f6b16ab.chunk.css"
+    "revision": "36326d8526ee95475408",
+    "url": "/YirueiLuBlog/static/css/2.fc960d39.chunk.css"
   },
   {
     "revision": "b9f08ffbcf880c3492ce",
     "url": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css"
   },
   {
-    "revision": "cb38b636a5ed625d1cd0",
+    "revision": "36326d8526ee95475408",
     "url": "/YirueiLuBlog/static/js/2.28f4bd68.chunk.js"
   },
   {
