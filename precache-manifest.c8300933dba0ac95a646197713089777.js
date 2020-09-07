@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8b8c152c5982a31ccac4ad83f1e5c70e",
+    "revision": "bc44ebb955fa4f5e4015a631743b4817",
     "url": "/YirueiLuBlog/index.html"
   },
   {
-    "revision": "f6ed9d154ab85b221b49",
+    "revision": "bb3a0e448423e47e4d5e",
     "url": "/YirueiLuBlog/static/css/2.9f6b16ab.chunk.css"
   },
   {
-    "revision": "2a120572addb391a6cc5",
+    "revision": "a81f83300a1a339dc40d",
     "url": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css"
   },
   {
-    "revision": "f6ed9d154ab85b221b49",
-    "url": "/YirueiLuBlog/static/js/2.6821a82d.chunk.js"
+    "revision": "bb3a0e448423e47e4d5e",
+    "url": "/YirueiLuBlog/static/js/2.b8f983b9.chunk.js"
   },
   {
     "revision": "f216cf3e9a09ce788db10c957d772fa0",
-    "url": "/YirueiLuBlog/static/js/2.6821a82d.chunk.js.LICENSE.txt"
+    "url": "/YirueiLuBlog/static/js/2.b8f983b9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2a120572addb391a6cc5",
-    "url": "/YirueiLuBlog/static/js/main.75367907.chunk.js"
+    "revision": "a81f83300a1a339dc40d",
+    "url": "/YirueiLuBlog/static/js/main.50d111b5.chunk.js"
   },
   {
     "revision": "b9dee457e9603ad11efe",
