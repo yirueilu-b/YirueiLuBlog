@@ -29,7 +29,7 @@ const wrap = render =>
     function (...args) {
         return render.apply(this, args)
             .replace('<code>', '<code class="hljs"> ')
-            .replace('<pre>', '<pre class="hljs">')
+            // .replace('<pre>', '<pre>')
     };
 
 function inlineCodeRenderer(tokens, idx, options) {

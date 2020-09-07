@@ -19,6 +19,7 @@ const useStyles = theme => ({
         }
     },
     markdown_style: {
+        lineHeight:'1.5em',
         padding: theme.spacing(3),
         maxWidth: "100%",
         textAlign: 'left',
@@ -44,7 +45,6 @@ const useStyles = theme => ({
         // material ui css
         ...theme.typography.body1,
         color: theme.palette.text.primary,
-        wordBreak: 'break-word',
         '& .anchor-link': {
             marginTop: -96, // Offset for the anchor.
             position: 'absolute',
@@ -52,10 +52,8 @@ const useStyles = theme => ({
         '& pre': {
             margin: theme.spacing(3, 'auto'),
             padding: theme.spacing(2),
-            direction: 'ltr',
-            // borderRadius: theme.sh.borderRadius,
-            overflowX: 'auto',
-            WebkitOverflowScrolling: 'touch', // iOS momentum scrolling.
+            background: '#2b2b2b',
+            color: '#bababa',
             maxWidth: 'calc(100vw - 32px)',
             [theme.breakpoints.up('md')]: {
                 maxWidth: 'calc(100vw - 32px - 16px)',
@@ -63,26 +61,21 @@ const useStyles = theme => ({
         },
 
         // inline code
-        '& p': {
+        '& *': {
             '& code': {
-                verticalAlign: 'middle',
-                // whiteSpace: 'pre',
-                overflowX: 'auto',
-                WebkitOverflowScrolling: 'touch', // iOS momentum scrolling.
-                direction: 'ltr',
-                lineHeight: 1.4,
                 display: 'inline-block',
-                fontFamily: 'Consolas, "Liberation Mono", Menlo, Courier, monospace',
-                WebkitFontSmoothing: 'subpixel-antialiased',
+                verticalAlign: 'middle',
                 padding: '2px 6px',
-                color: theme.palette.text.primary,
                 backgroundColor: theme.palette.type === 'light' ?
                     'rgba(0, 0, 0, 0.1)' :
                     'rgba(255, 255, 255, 0.1)',
+                    'rgba(0, 0, 0, 0.1)' :
+                    'rgba(255, 255, 255, 0.1)',
                 fontSize: '.85em',
+                lineHeight: 'inherit',
+                wordBreak: 'break-all',
             },
             '& code[class*="language-"]': {
-                // whiteSpace: 'pre',
                 overflowX: 'auto',
                 WebkitOverflowScrolling: 'touch', // iOS momentum scrolling.
                 backgroundColor: '#272c34',
@@ -91,13 +84,26 @@ const useStyles = theme => ({
                 lineHeight: 1.5,
             }
         },
-
+        '& .hljs': {
+            whiteSpace: 'pre !important',
+            wordBreak: 'keep-all !important',
+            WebkitOverflowScrolling: 'touch', // iOS momentum scrolling.
+            display: 'block',
+            overflowX: 'auto',
+            padding: '0.5em',
+            background: '#2b2b2b',
+            color: '#bababa',
+        },
         // code blocks
         '& pre code': {
-            // fontSize: '1em',
-            // whiteSpace: 'pre',
-            // overflowX: 'auto',
-            // WebkitOverflowScrolling: 'touch', // iOS momentum scrolling.
+            whiteSpace: 'pre !important',
+            wordBreak: 'keep-all !important',
+            WebkitOverflowScrolling: 'touch', // iOS momentum scrolling.
+            display: 'block',
+            overflowX: 'auto',
+            padding: '0.5em',
+            background: '#2b2b2b',
+            color: '#bababa',
         },
         '& .token.operator': {
             background: 'transparent',
@@ -139,24 +145,6 @@ const useStyles = theme => ({
         },
         '& h1, & h2, & h3, & h4, & h5, & h6': {
             fontWeight: theme.typography.fontWeightBold,
-            '& code': {
-                // whiteSpace: 'pre',
-                overflowX: 'auto',
-                WebkitOverflowScrolling: 'touch', // iOS momentum scrolling.
-                direction: 'ltr',
-                lineHeight: 1.4,
-                display: 'inline-block',
-                fontFamily: 'Consolas, "Liberation Mono", Menlo, Courier, monospace',
-                WebkitFontSmoothing: 'subpixel-antialiased',
-                padding: '2px 6px',
-                color: theme.palette.text.primary,
-                backgroundColor: theme.palette.type === 'light' ?
-                    'rgba(0, 0, 0, 0.1)' :
-                    'rgba(255, 255, 255, 0.1)',
-                fontSize: '.85em',
-                // Remove scroll on small screens.
-                // wordBreak: 'break-all',
-            },
             '& .anchor-link-style': {
                 // To prevent the link to get the focus.
                 display: 'none',
