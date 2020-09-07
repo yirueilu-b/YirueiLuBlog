@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6ec6708fd7b0a2b9b13cac6c0073c796",
+    "revision": "58ff1d176db8722b51b4e3984ddc632a",
     "url": "/YirueiLuBlog/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/YirueiLuBlog/static/css/2.8de8da72.chunk.css"
   },
   {
-    "revision": "b4c3f2bfc086ebc40696",
+    "revision": "6da9c864638c224aaa22",
     "url": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/YirueiLuBlog/static/js/2.28f4bd68.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b4c3f2bfc086ebc40696",
-    "url": "/YirueiLuBlog/static/js/main.43e613f4.chunk.js"
+    "revision": "6da9c864638c224aaa22",
+    "url": "/YirueiLuBlog/static/js/main.a5b29593.chunk.js"
   },
   {
     "revision": "b9dee457e9603ad11efe",
