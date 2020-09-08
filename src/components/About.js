@@ -11,21 +11,9 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
-import Timeline from '@material-ui/lab/Timeline';
-import TimelineItem from '@material-ui/lab/TimelineItem';
-import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
-import TimelineConnector from '@material-ui/lab/TimelineConnector';
-import TimelineContent from '@material-ui/lab/TimelineContent';
-import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
-import TimelineDot from '@material-ui/lab/TimelineDot';
-import FastfoodIcon from '@material-ui/icons/Fastfood';
-import LaptopMacIcon from '@material-ui/icons/LaptopMac';
-import HotelIcon from '@material-ui/icons/Hotel';
-import RepeatIcon from '@material-ui/icons/Repeat';
-import Paper from '@material-ui/core/Paper';
 
 const section_padding_small = '5vh 10vw';
-const section_padding = '20vw';
+const section_padding = '26vw';
 const section_divider = '1px';
 const useStyles = theme => ({
     root: {
@@ -60,6 +48,7 @@ const useStyles = theme => ({
             paddingRight: section_padding,
         },
         borderBottom: `${section_divider} solid ${theme.palette.divider}`,
+        backgroundColor: theme.palette.background.paper
     },
     project: {
         padding: section_padding_small,
@@ -182,13 +171,16 @@ const experienceStyles = makeStyles((theme) => ({
         }
     },
     title: {
-        borderBottom: `5px solid rgba(55, 168, 218, 0.3)`,
+        borderBottom: `1px solid rgba(55, 168, 218, 0.3)`,
         marginTop: 48,
         textAlign: 'left',
     },
     detail: {
         marginTop: 24,
         textAlign: 'left',
+        '& * h4, & * h5': {
+            fontWeight: 500,
+        }
     },
     logo: {
         marginTop: 24,
@@ -233,11 +225,13 @@ function Experience() {
                                 Institute for Information Industry
                             </Typography>
                             <Typography gutterBottom variant='subtitle1'>
-                                Here is some descriptions of the experience in this section
-                                Here is some descriptions of the experience in this section
-                                Here is some descriptions of the experience in this section
-                                Here is some descriptions of the experience in this section
-                                Here is some descriptions of the experience in this section
+                                Software Engineer, 09/2018 - PRESENT
+                            </Typography>
+                            <Typography gutterBottom variant='body1'>
+                                As a software engineer in Institute for Information Industry,
+                                my job is to research and implement the latest and the state of the art Machine Learning
+                                algorithms
+                                and optimize them to make them possible applying in real world environment.
                             </Typography>
                         </Grid>
                     </Grid>
@@ -252,12 +246,14 @@ function Experience() {
                             <Typography display='block' gutterBottom variant='h5'>
                                 Institute of Information Science, Academia Sinica
                             </Typography>
-                            <Typography display='block' gutterBottom variant='subtitle1'>
-                                Here is some descriptions of the experience in this section
-                                Here is some descriptions of the experience in this section
-                                Here is some descriptions of the experience in this section
-                                Here is some descriptions of the experience in this section
-                                Here is some descriptions of the experience in this section
+                            <Typography gutterBottom variant='subtitle1'>
+                                Intern, 06/2016 - 09/2016
+                            </Typography>
+                            <Typography display='block' gutterBottom variant='body1'>
+                                During the internship, I studied the research papers about Air Quality Index ( AQI )
+                                inference system,
+                                tried to increase performance of the regression model and visualize the result using
+                                javascript.
                             </Typography>
                         </Grid>
                     </Grid>
@@ -281,11 +277,15 @@ function Experience() {
                                 National Chiao Tung University
                             </Typography>
                             <Typography gutterBottom variant='subtitle1'>
-                                Here is some descriptions of the experience in this section
-                                Here is some descriptions of the experience in this section
-                                Here is some descriptions of the experience in this section
-                                Here is some descriptions of the experience in this section
-                                Here is some descriptions of the experience in this section
+                                MS, Computer Science, 09/2015 - 06/2018
+                            </Typography>
+                            <Typography gutterBottom variant='body1'>
+                                Focused on Machine Learning, research the stock price prediction using Deep Learning.
+                                My thesis is Stock Price Prediction Using Deep Learning and Sentiment Analysis.
+                                This paper studied the correlation between posts on forum and the prediction result
+                                using LSTM.
+                                The result shows that the plenty text information on the internet
+                                could increase the accuracy of stock price prediction.
                             </Typography>
                         </Grid>
                     </Grid>
@@ -300,11 +300,14 @@ function Experience() {
                                 National Taipei University of Technology
                             </Typography>
                             <Typography gutterBottom variant='subtitle1'>
-                                Here is some descriptions of the experience in this section
-                                Here is some descriptions of the experience in this section
-                                Here is some descriptions of the experience in this section
-                                Here is some descriptions of the experience in this section
-                                Here is some descriptions of the experience in this section
+                                BS, Electrical Engineering, 04/2011 - 07/2015
+                            </Typography>
+                            <Typography gutterBottom variant='body1'>
+                                Project about human face recognition.
+                                Use computer vision algorithms to process face image and find key points of face
+                                then convert the key points into vectors for comparing among different users.
+                                The Project is a comprehensive access control system, which integrates with RFID tag and
+                                embedded hardware.
                             </Typography>
                         </Grid>
                     </Grid>
@@ -315,52 +318,83 @@ function Experience() {
     );
 }
 
-const pojectStyle = makeStyles({
+const projectStyle = makeStyles({
     root: {
-        display: 'flex',
-        margin: '24px 0',
-        width: '100%',
+        // wordBreak: 'break-word',
+        marginBottom: 48,
+        '& * h4, & * h5': {
+            fontWeight: 500,
+        }
+    },
+    card_root: {
+        // wordBreak: 'break-word',
+        margin: '48px 0',
         height: 250,
-        backgroundColor: 'rgba(0,0,0,0.5)'
+        width: '100%',
+        backgroundColor: 'rgba(180, 180, 180, 0.87)'
+    },
+    title: {
+        borderBottom: `1px solid rgba(55, 168, 218, 0.3)`,
+        marginTop: 48,
+        textAlign: 'left',
+    },
+    sub_title: {
+        padding: 24,
+        textAlign: 'left',
+        backgroundColor: 'rgba(180, 180, 180, 0.87)'
     },
 });
 
-const pojects_info = [
+const projects_info = [
     {
         image: 'https://cdn-images-1.medium.com/max/500/1*q1uVc-MU-tC-WwFp2yXJow.gif',
-        title: 'Real-time Object Detection',
+        title: 'Real-time Hand Gesture Recognition System',
     },
     {
         image: 'https://thumbs.gfycat.com/DimSarcasticCockerspaniel-size_restricted.gif',
-        title: 'Segmentation on Traffic',
+        title: 'Cat Segmentation',
     },
     {
         image: 'https://1.bp.blogspot.com/-H71UdvAObkQ/XVrSxUc2rFI/AAAAAAAAEhU/h7NuEZ23Pu4XAdwCcaKNxakGbN4nJUc2wCLcBGAs/s400/image2.gif',
-        title: 'Hand Tracking and Gesture Recognition',
+        title: 'BTC Auto Trading Bot',
     },
     {
         image: 'https://thumbs.gfycat.com/CoordinatedDentalIggypops-max-1mb.gif',
-        title: 'Stock Price Prediction',
+        title: 'React Blog',
     }
 ];
 
 function Project(props) {
-    const classes = pojectStyle();
+    const classes = projectStyle();
     let ProjectCards = [];
-    for (let i = 0; i < pojects_info.length; i++) {
+    for (let i = 0; i < projects_info.length; i++) {
         ProjectCards.push(
-            <Grid key={i} className={classes.left} container item xs={12} justify="center">
-                <Fade in={true} timeout={3000}>
-                    <div className={classes.root}>
-                    </div>
-                </Fade>
-            </Grid>
+            <React.Fragment key={i}>
+                <div className={classes.card_root}>
+                    <Typography
+                        className={classes.sub_title} gutterBottom variant='h5'>
+                        {projects_info[i].title}
+                    </Typography>
+                </div>
+            </React.Fragment>
         )
     }
     return (
-        <React.Fragment>
-            {ProjectCards}
-        </React.Fragment>
+        <Fade in={true} timeout={3000}>
+            <Grid
+                className={classes.root}
+                container
+                spacing={0}
+                alignItems="flex-start"
+                justify="flex-start"
+            >
+                <Grid className={classes.title} container item xs={12} justify="flex-start"
+                      alignItems="flex-start">
+                    <Typography gutterBottom variant='h4'>Recent Projects</Typography>
+                </Grid>
+                {ProjectCards}
+            </Grid>
+        </Fade>
     );
 }
 
