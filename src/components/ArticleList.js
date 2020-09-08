@@ -7,6 +7,8 @@ import article_list from '../article_list.json'
 import Pagination from '@material-ui/lab/Pagination';
 import ScrollToTopOnMount from './ScrollTopOnMount'
 
+import Fade from '@material-ui/core/Fade';
+
 const ARTICLE_PER_PAGE = 5;
 
 const useStyles = theme => ({
@@ -58,16 +60,18 @@ class MediaControlCard extends React.Component {
         let ArticleCards = [];
         for (let i = 0; i < this.state.currentArticleList.length; i++) {
             ArticleCards.push(
-                <Grid item xs={12} md={9} key={i} className={classes.card_grid}>
-                    <ArticleCard
-                        post_title={this.state.currentArticleList[i]["article_title"]}
-                        post_datetime={this.state.currentArticleList[i]["article_datetime"]}
-                        post_description={this.state.currentArticleList[i]["article_description"]}
-                        image_url={this.state.currentArticleList[i]["article_cover_image_url"]}
-                        // post_link={'blog/'+ this.state.currentArticleList[i]["article_md_path"]}
-                        post_link={'blog/' + this.state.currentArticleList[i]["uuid"]}
-                    />
-                </Grid>
+                <Fade in={true} timeout={1000} key={i}>
+                    <Grid item xs={12} md={9} className={classes.card_grid}>
+                        <ArticleCard
+                            post_title={this.state.currentArticleList[i]["article_title"]}
+                            post_datetime={this.state.currentArticleList[i]["article_datetime"]}
+                            post_description={this.state.currentArticleList[i]["article_description"]}
+                            image_url={this.state.currentArticleList[i]["article_cover_image_url"]}
+                            // post_link={'blog/'+ this.state.currentArticleList[i]["article_md_path"]}
+                            post_link={'blog/' + this.state.currentArticleList[i]["uuid"]}
+                        />
+                    </Grid>
+                </Fade>
             )
         }
 

@@ -18,6 +18,8 @@ import Menu from './Menu'
 import {Link} from "react-router-dom";
 import Button from '@material-ui/core/Button';
 
+
+
 const Title = "YirueiLu's Blog";
 
 const appBarStyle = makeStyles((theme) => ({
@@ -116,34 +118,36 @@ export default function BackToTop(props) {
         <React.Fragment>
             <CssBaseline/>
             <HideOnScroll {...props}>
-                <AppBar className={classes.root} color="default">
-                    <Toolbar>
-                        {/*{props.menu}*/}
-                        {/*<Tooltip title="Menu">*/}
-                        {/*<IconButton className={classes.iconButton1}*/}
-                        {/*edge="end"*/}
-                        {/*color="default"*/}
-                        {/*onClick={props.onToggleDark}>*/}
-                        {/*<MenuIcon/>*/}
-                        {/*</IconButton>*/}
-                        {/*</Tooltip>*/}
-                        <Menu/>
-                        <Button component={Link} to={'/'} onClick={() =>  window.scrollTo(0, 0)}>
-                        <Typography variant="h6">
-                            {Title}
-                        </Typography>
-                        </Button>
-                        <Tooltip
-                            title={props.theme.palette.type === "light" ? 'Switch to dark theme' : 'Switch to light theme'}>
-                            <IconButton className={classes.iconButton2}
-                                        edge="end"
-                                        color="default"
-                                        onClick={props.onToggleDark}>
-                                {props.theme.palette.type === "light" ? <Brightness7Icon/> : <Brightness4Icon/>}
-                            </IconButton>
-                        </Tooltip>
-                    </Toolbar>
-                </AppBar>
+                <Slide in={true}>
+                    <AppBar className={classes.root} color="default">
+                        <Toolbar>
+                            {/*{props.menu}*/}
+                            {/*<Tooltip title="Menu">*/}
+                            {/*<IconButton className={classes.iconButton1}*/}
+                            {/*edge="end"*/}
+                            {/*color="default"*/}
+                            {/*onClick={props.onToggleDark}>*/}
+                            {/*<MenuIcon/>*/}
+                            {/*</IconButton>*/}
+                            {/*</Tooltip>*/}
+                            <Menu/>
+                            <Button component={Link} to={'/'} onClick={() => window.scrollTo(0, 0)}>
+                                <Typography variant="h6">
+                                    {Title}
+                                </Typography>
+                            </Button>
+                            <Tooltip
+                                title={props.theme.palette.type === "light" ? 'Switch to dark theme' : 'Switch to light theme'}>
+                                <IconButton className={classes.iconButton2}
+                                            edge="end"
+                                            color="default"
+                                            onClick={props.onToggleDark}>
+                                    {props.theme.palette.type === "light" ? <Brightness7Icon/> : <Brightness4Icon/>}
+                                </IconButton>
+                            </Tooltip>
+                        </Toolbar>
+                    </AppBar>
+                </Slide>
             </HideOnScroll>
             <Toolbar id="back-to-top-anchor"/>
             <ScrollTop {...props}>

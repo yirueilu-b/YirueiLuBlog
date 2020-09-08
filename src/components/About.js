@@ -5,31 +5,40 @@ import Grid from '@material-ui/core/Grid';
 import ScrollToTopOnMount from './ScrollTopOnMount'
 import Typography from '@material-ui/core/Typography';
 
-
+const section_height = '80vw';
 const useStyles = theme => ({
     root: {
         display: 'flex',
-        padding: 0
+        padding: 0,
+        maxWidth: '100vw',
     },
     content: {
-        [theme.breakpoints.up('sm')]: {
-            paddingLeft: '10vw',
-            paddingRight: '10vw',
-        },
+        // [theme.breakpoints.up('sm')]: {
+        //     paddingLeft: '10vw',
+        //     paddingRight: '10vw',
+        // },
         // backgroundColor: theme.palette.background.paper,
     },
     profile: {
         "& h4":{
             padding: 24
         },
-        height: '100vh',
+        [theme.breakpoints.up('sm')]: {
+            paddingLeft: '15vw',
+            paddingRight: '15vw',
+        },
+        height: section_height,
         backgroundColor: 'rgba(55, 168, 218, 0.1)',
     },
     experience: {
         "& h4":{
             padding: 24
         },
-        height: '100vh',
+        [theme.breakpoints.up('sm')]: {
+            paddingLeft: '15vw',
+            paddingRight: '15vw',
+        },
+        height: section_height,
         backgroundColor: 'rgba(0, 0, 0, 0.1)',
         // backgroundColor: theme.palette.background.paper,
     },
@@ -37,7 +46,11 @@ const useStyles = theme => ({
         "& h4":{
             padding: 24
         },
-        height: '100vh',
+        [theme.breakpoints.up('sm')]: {
+            paddingLeft: '15vw',
+            paddingRight: '15vw',
+        },
+        height: section_height,
         backgroundColor: 'rgba(255, 255, 255, 0.1)',
         // backgroundColor: theme.palette.background.paper,
     }

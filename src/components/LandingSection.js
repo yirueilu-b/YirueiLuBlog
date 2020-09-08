@@ -8,7 +8,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
-
+import Fade from '@material-ui/core/Fade';
 
 const blog_title = "YirueiLu's Blog";
 const blog_description = "Some notes about web applications, machine learning and coding.";
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        height: 287+87,
+        height: 287 + 87,
     },
     overlay: {
         position: 'absolute',
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: 'rgba(0,0,0,.3)',
     },
     mainFeaturedPostContent: {
-        marginTop:theme.spacing(4),
+        marginTop: theme.spacing(4),
         textAlign: 'left',
         position: 'relative',
         padding: theme.spacing(3),
@@ -70,48 +70,50 @@ export default function MainFeaturedPost(props) {
     // const {post} = props;
 
     return (
-        <Paper
-            className={classes.mainFeaturedPost}
-            style={{backgroundImage: `url(${post.image})`}}
-        >
-            {/* Increase the priority of the hero background image */}
-            {<img style={{display: 'none'}} src={post.image} alt='imageText'/>}
-            <div className={classes.overlay}/>
-            <Grid container>
-                <Grid item md={8}>
-                    <div className={classes.mainFeaturedPostContent}>
-                        <Typography gutterBottom variant="h4" color="inherit">
-                            {blog_title}
-                        </Typography>
-                        <Typography gutterBottom variant="subtitle1" color="inherit">
-                            {blog_description}
-                        </Typography>
-                        <Tooltip title='LinkedIn'>
-                            <IconButton
-                                className={classes.iconButton1}
-                                edge="end"
-                                color="inherit"
-                                href='https://www.linkedin.com/in/a02496104/'
-                                target='_blank'
-                            >
-                                <LinkedInIcon/>
-                            </IconButton>
-                        </Tooltip>
-                        <Tooltip title='Github'>
-                            <IconButton
-                                className={classes.iconButton2}
-                                edge="end"
-                                color="inherit"
-                                href='https://github.com/yirueilu-b'
-                                target='_blank'
-                            >
-                                <GitHubIcon/>
-                            </IconButton>
-                        </Tooltip>
-                    </div>
+        <Fade in={true} timeout={3000}>
+            <Paper
+                className={classes.mainFeaturedPost}
+                style={{backgroundImage: `url(${post.image})`}}
+            >
+                {/* Increase the priority of the hero background image */}
+                {<img style={{display: 'none'}} src={post.image} alt='imageText'/>}
+                <div className={classes.overlay}/>
+                <Grid container>
+                    <Grid item md={8}>
+                        <div className={classes.mainFeaturedPostContent}>
+                            <Typography gutterBottom variant="h4" color="inherit">
+                                {blog_title}
+                            </Typography>
+                            <Typography gutterBottom variant="subtitle1" color="inherit">
+                                {blog_description}
+                            </Typography>
+                            <Tooltip title='LinkedIn'>
+                                <IconButton
+                                    className={classes.iconButton1}
+                                    edge="end"
+                                    color="inherit"
+                                    href='https://www.linkedin.com/in/a02496104/'
+                                    target='_blank'
+                                >
+                                    <LinkedInIcon/>
+                                </IconButton>
+                            </Tooltip>
+                            <Tooltip title='Github'>
+                                <IconButton
+                                    className={classes.iconButton2}
+                                    edge="end"
+                                    color="inherit"
+                                    href='https://github.com/yirueilu-b'
+                                    target='_blank'
+                                >
+                                    <GitHubIcon/>
+                                </IconButton>
+                            </Tooltip>
+                        </div>
+                    </Grid>
                 </Grid>
-            </Grid>
-        </Paper>
+            </Paper>
+        </Fade>
     );
 }
 

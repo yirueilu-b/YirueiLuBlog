@@ -14,7 +14,7 @@ import LandingSection from './components/LandingSection'
 import ArticleList from './components/ArticleList'
 import ArticleDetail from './components/ArticleDetail'
 import About from './components/About'
-import Category from './components/Category'
+// import Category from './components/Category'
 
 const fontFamily = [
     // '微軟正黑體',
@@ -106,9 +106,9 @@ class App extends React.Component {
                             <Route exact path="/about">
                                 <About/>
                             </Route>
-                            <Route exact path="/category">
-                                <Category/>
-                            </Route>
+                            {/*<Route exact path="/category">*/}
+                                {/*<Category/>*/}
+                            {/*</Route>*/}
                         </Switch>
 
                         <Footer/>

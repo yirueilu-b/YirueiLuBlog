@@ -10,6 +10,7 @@ import useStyles from './markdownStyle'
 import md from './markdownIt'
 import article_list from '../article_list.json'
 import ScrollToTopOnMount from './ScrollTopOnMount'
+import Fade from '@material-ui/core/Fade';
 
 const articleList = JSON.parse(article_list);
 
@@ -21,6 +22,7 @@ class Article extends React.Component {
             markdownHTML: null,
         };
     }
+
     componentDidMount() {
         const article_info = articleList.filter(article => article['uuid'] === this.props.match.params.uuid)[0];
         const file_name = article_info['article_md_path'];
@@ -48,36 +50,39 @@ class Article extends React.Component {
     render() {
         const {classes} = this.props;
         return (
+
             <Container className={classes.root}>
                 <ScrollToTopOnMount/>
-                <Grid
-                    container
-                    spacing={0}
-                    direction="row"
-                    alignItems="flex-start"
-                    justify="center">
+                <Fade in={true} timeout={3000}>
+                    <Grid
+                        container
+                        spacing={0}
+                        direction="row"
+                        alignItems="flex-start"
+                        justify="center">
 
-                    <Grid container
-                          item
-                          xs={12}
-                          md={9}
-                          className={classes.article_section}
-                    >
-                        <div
-                            className={classes.markdown_style}
-                            dangerouslySetInnerHTML={{__html: this.state.markdownHTML}}>
-                        </div>
+                        <Grid container
+                              item
+                              xs={12}
+                              md={9}
+                              className={classes.article_section}
+                        >
+                            <div
+                                className={classes.markdown_style}
+                                dangerouslySetInnerHTML={{__html: this.state.markdownHTML}}>
+                            </div>
+                        </Grid>
+                        <Grid container
+                              item
+                              xs={12}
+                              md={9}
+                              className={classes.comment_section}
+                        >
+                            <div className={classes.disqus} id="inject-comments-for-uterances">
+                            </div>
+                        </Grid>
                     </Grid>
-                    <Grid container
-                          item
-                          xs={12}
-                          md={9}
-                          className={classes.comment_section}
-                    >
-                        <div className={classes.disqus} id="inject-comments-for-uterances">
-                        </div>
-                    </Grid>
-                </Grid>
+                </Fade>
             </Container>
         );
     }

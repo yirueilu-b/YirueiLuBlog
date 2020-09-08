@@ -11,7 +11,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import HomeIcon from '@material-ui/icons/Home';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import ClassIcon from '@material-ui/icons/Class';
+// import ClassIcon from '@material-ui/icons/Class';
 import {Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -43,10 +43,10 @@ export default function TemporaryDrawer() {
             icon:<AccountCircleIcon/>,
             link:'/about'
         },
-        Category: {
-            icon:<ClassIcon/>,
-            link:'/category'
-        },
+        // Category: {
+        //     icon:<ClassIcon/>,
+        //     link:'/category'
+        // },
     };
     // const listItems = Object.keys(tifs).map(function (key) {
     //     return <option value={key}>{tifs[key]}</option>
