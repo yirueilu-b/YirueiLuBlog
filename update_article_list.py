@@ -59,9 +59,13 @@ def parse_md(path):
 
 
 if __name__ == '__main__':
-    with open(RES_JSON_PATH) as f:
-        exist_data = json.loads(json.load(f))
-    [print(data) for data in exist_data]
+    if os.path.exists(RES_JSON_PATH):
+        with open(RES_JSON_PATH) as f:
+            exist_data = json.loads(json.load(f))
+    else:
+        exist_data = []
+
+    # [print(data) for data in exist_data]
     res_json = []
     for article_path in ALL_ARTICLE_PATH:
         article_parsed = parse_md(article_path)

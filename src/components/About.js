@@ -33,7 +33,7 @@ const useStyles = theme => ({
             paddingLeft: section_padding,
             paddingRight: section_padding,
         },
-        borderBottom: `${section_divider} solid ${theme.palette.divider}`,
+        // borderBottom: `${section_divider} solid ${theme.palette.divider}`,
         backgroundImage: theme.palette.type === 'dark' ?
             'url(https://thumbs.gfycat.com/UnequaledLazyGrayreefshark-size_restricted.gif)' :
             'url(https://thumbs.gfycat.com/FrightenedNaughtyDarwinsfox-size_restricted.gif)',
@@ -47,7 +47,7 @@ const useStyles = theme => ({
             paddingLeft: section_padding,
             paddingRight: section_padding,
         },
-        borderBottom: `${section_divider} solid ${theme.palette.divider}`,
+        // borderBottom: `${section_divider} solid ${theme.palette.divider}`,
         backgroundColor: theme.palette.background.paper
     },
     project: {
@@ -58,7 +58,6 @@ const useStyles = theme => ({
         },
     }
 });
-
 
 class About extends React.Component {
     constructor(props) {
@@ -102,6 +101,8 @@ class About extends React.Component {
 
 const profileStyle = makeStyles((theme) => ({
     root: {
+        // marginTop: 24,
+        marginBottom: 48,
         '& * h5': {
             fontWeight: 500,
         }
@@ -171,7 +172,7 @@ const experienceStyles = makeStyles((theme) => ({
         }
     },
     title: {
-        borderBottom: `1px solid rgba(55, 168, 218, 0.3)`,
+        borderBottom: `${section_divider} solid ${theme.palette.divider}`,
         marginTop: 48,
         textAlign: 'left',
     },
@@ -318,7 +319,7 @@ function Experience() {
     );
 }
 
-const projectStyle = makeStyles({
+const projectStyle = makeStyles((theme) => ({
     root: {
         // wordBreak: 'break-word',
         marginBottom: 48,
@@ -328,40 +329,46 @@ const projectStyle = makeStyles({
     },
     card_root: {
         // wordBreak: 'break-word',
-        margin: '48px 0',
-        height: 250,
-        width: '100%',
-        backgroundColor: 'rgba(180, 180, 180, 0.87)'
+        marginTop: 48,
+        // backgroundColor: 'rgba(180, 180, 180, 0.87)'
     },
     title: {
-        borderBottom: `1px solid rgba(55, 168, 218, 0.3)`,
+        borderBottom: `${section_divider} solid ${theme.palette.divider}`,
         marginTop: 48,
         textAlign: 'left',
     },
-    sub_title: {
-        padding: 24,
-        textAlign: 'left',
-        backgroundColor: 'rgba(180, 180, 180, 0.87)'
+    card_content: {
+        height: '100%',
     },
-});
+    detail: {
+        padding: '24px 0 0 0',
+        [theme.breakpoints.up('md')]: {
+            padding: '0 0 0 48px'
+        },
+        textAlign: 'left',
+        '& * h4, & * h5': {
+            fontWeight: 500,
+        }
+    },
+}));
 
 const projects_info = [
     {
-        image: 'https://cdn-images-1.medium.com/max/500/1*q1uVc-MU-tC-WwFp2yXJow.gif',
+        image: 'https://i.imgur.com/AeXxSiX.gif',
         title: 'Real-time Hand Gesture Recognition System',
+        description: 'Train detection model and classification model to detect hands and classify the gesture ' +
+            'then use the result to create an interface which could control cursor with hands directly',
     },
     {
-        image: 'https://thumbs.gfycat.com/DimSarcasticCockerspaniel-size_restricted.gif',
+        image: process.env.PUBLIC_URL + '/project_image/catSegmentation.png',
         title: 'Cat Segmentation',
+        description: 'Use different segmentation models such as U-net and LinkNet and Oxford-IIIT Pet Dataset to train a cat segmentation model',
     },
     {
-        image: 'https://1.bp.blogspot.com/-H71UdvAObkQ/XVrSxUc2rFI/AAAAAAAAEhU/h7NuEZ23Pu4XAdwCcaKNxakGbN4nJUc2wCLcBGAs/s400/image2.gif',
+        image: 'https://tvblog-static.tradingview.com/uploads/2018/03/Poloniex_logo_2-1024x512.png',
         title: 'BTC Auto Trading Bot',
+        description: 'Build a auto trading bot using Poloniex API and trading with simple moving average strategy',
     },
-    {
-        image: 'https://thumbs.gfycat.com/CoordinatedDentalIggypops-max-1mb.gif',
-        title: 'React Blog',
-    }
 ];
 
 function Project(props) {
@@ -369,14 +376,32 @@ function Project(props) {
     let ProjectCards = [];
     for (let i = 0; i < projects_info.length; i++) {
         ProjectCards.push(
-            <React.Fragment key={i}>
-                <div className={classes.card_root}>
-                    <Typography
-                        className={classes.sub_title} gutterBottom variant='h5'>
-                        {projects_info[i].title}
-                    </Typography>
-                </div>
-            </React.Fragment>
+            <Grid className={classes.card_root} key={i} container item xs={12} justify="flex-start"
+                  alignItems="flex-start">
+                <Grid container item xs={12} justify="center" alignItems="center">
+                    <Grid className={classes.logo} container item xs={12} md={3} justify="center">
+                        <Card raised={true}>
+                            <CardActionArea className={classes.card_content}>
+                                <CardMedia
+                                    component="img"
+                                    alt="Contemplative Reptile"
+                                    height="168"
+                                    image={projects_info[i].image}
+                                    title={projects_info[i].title}
+                                />
+                            </CardActionArea>
+                        </Card>
+                    </Grid>
+                    <Grid className={classes.detail} item xs={12} md={9}>
+                        <Typography gutterBottom variant='h5'>
+                            {projects_info[i].title}
+                        </Typography>
+                        <Typography gutterBottom variant='body1'>
+                            {projects_info[i].description}
+                        </Typography>
+                    </Grid>
+                </Grid>
+            </Grid>
         )
     }
     return (

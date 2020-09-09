@@ -24,5 +24,3 @@ yarn-error.log*
 
 venv
 .idea
-src/articles
-src/article_list.json
