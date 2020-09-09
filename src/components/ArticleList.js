@@ -18,7 +18,9 @@ const useStyles = theme => ({
         marginBottom: '10vh',
         // minHeight: 800,
     },
-    card_grid: {},
+    card_grid: {
+        margin: '24px 0',
+    },
     pagination: {
         marginTop: 24,
         // sizeSmall: true,

@@ -11,9 +11,12 @@ import {Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        paddingBottom:24 ,
         height: '100%',
         display: 'flex',
         backgroundColor: theme.palette.background.default,
+        borderBottom: '1px solid',
+        borderBottomColor: theme.palette.divider,
     },
     card_image: {
         width: '40%',
@@ -21,8 +24,6 @@ const useStyles = makeStyles((theme) => ({
     card_info: {
         display: 'flex',
         flexDirection: 'column',
-        borderBottom: '1px solid',
-        borderBottomColor: theme.palette.divider,
         width: '100%',
     },
     card_title: {
