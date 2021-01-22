@@ -6,7 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import {withStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container'
 import {unstable_createMuiStrictModeTheme} from '@material-ui/core/styles';
-import {HashRouter as Router, Switch, Route} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Footer from './components/Footer'
 
 import Navbar from './components/Navbar'
@@ -14,6 +14,7 @@ import LandingSection from './components/LandingSection'
 import ArticleList from './components/ArticleList'
 import ArticleDetail from './components/ArticleDetail'
 import About from './components/About'
+import {HelmetProvider} from "react-helmet-async";
 // import Category from './components/Category'
 
 const fontFamily = [
@@ -76,7 +77,7 @@ class App extends React.Component {
             theme: this.state.theme.palette.type === 'light' ? "github-dark" : "github-light"
         };
         let utterances = document.querySelector('iframe');
-        if(utterances){
+        if (utterances) {
             utterances.contentWindow.postMessage(message, 'https://utteranc.es');
         }
     };
@@ -85,35 +86,33 @@ class App extends React.Component {
 
         const {classes} = this.props;
         return (
-            <Router>
-                <MuiThemeProvider theme={myTheme}>
-                    <CssBaseline/>
-                    <Container className={classes.root}>
-                        <Navbar theme={this.state.theme} onToggleDark={this.toggleDarkTheme}/>
+            <Router basename="/YirueiLuBlog">
+                <HelmetProvider>
+                    <MuiThemeProvider theme={this.state.theme}>
+                        <CssBaseline/>
+                        <Container className={classes.root}>
+                            <Navbar theme={this.state.theme} onToggleDark={this.toggleDarkTheme}/>
 
-                        <Switch>
-                            <Route exact path="/">
-                                <LandingSection/>
-                                <ArticleList/>
-                            </Route>
-                            <Route exact path="/blog">
-                                <LandingSection/>
-                                <ArticleList/>
-                            </Route>
-                            <Route path="/blog/:uuid">
-                                <ArticleDetail theme={this.state.theme}/>
-                            </Route>
-                            <Route exact path="/about">
-                                <About/>
-                            </Route>
-                            {/*<Route exact path="/category">*/}
+                            <Switch>
+                                <Route exact path="/">
+                                    <LandingSection/>
+                                    <ArticleList/>
+                                </Route>
+                                <Route exact path="/about">
+                                    <About/>
+                                </Route>
+                                <Route path="/blog/:uuid">
+                                    <ArticleDetail theme={this.state.theme}/>
+                                </Route>
+                                {/*<Route exact path="/category">*/}
                                 {/*<Category/>*/}
-                            {/*</Route>*/}
-                        </Switch>
+                                {/*</Route>*/}
+                            </Switch>
 
-                        <Footer/>
-                    </Container>
-                </MuiThemeProvider>
+                            <Footer/>
+                        </Container>
+                    </MuiThemeProvider>
+                </HelmetProvider>
             </Router>
         );
     }

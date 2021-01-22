@@ -7,6 +7,7 @@ import article_list from '../article_list.json'
 import Pagination from '@material-ui/lab/Pagination';
 import ScrollToTopOnMount from './ScrollTopOnMount'
 
+import {Helmet} from 'react-helmet-async';
 import Fade from '@material-ui/core/Fade';
 
 const ARTICLE_PER_PAGE = 5;
@@ -78,36 +79,43 @@ class MediaControlCard extends React.Component {
         }
 
         return (
-            <Container className={classes.root}>
+                <Container className={classes.root}>
+                    <Helmet>
+                        <title>YirueiLu's Blog</title>
+                        <meta name="description"
+                              content="Some notes about web applications, machine learning and coding"/>
+                        <meta name="og:title" property="og:title" content="YirueiLu's Blog"/>
+                        <meta name="og:description" property="og:description" content="Some notes about web applications, machine learning and coding"/>
+                        <meta name="og:image" property="og:image" content={process.env.PUBLIC_URL + '/code.png'}/>
+                    </Helmet>
+                    <ScrollToTopOnMount/>
+                    <Grid
+                        container
+                        spacing={0}
+                        direction="row"
+                        alignItems="flex-start"
+                        justify="center"
+                    >
+                        {ArticleCards}
 
-                <ScrollToTopOnMount/>
-                <Grid
-                    container
-                    spacing={0}
-                    direction="row"
-                    alignItems="flex-start"
-                    justify="center"
-                >
-                    {ArticleCards}
-
-                    <Grid container item xs={12} md={9} justify="center">
-                        <Pagination
-                            onChange={this.handlePageChange}
-                            defaultPage={1}
-                            className={classes.pagination}
-                            count={Math.ceil(this.state.articleList.length / ARTICLE_PER_PAGE)}
-                            variant="outlined"
-                            shape="rounded"
-                            size='small'
-                            hideNextButton={this.state.current_page === Math.ceil(this.state.articleList.length / ARTICLE_PER_PAGE)}
-                            hidePrevButton={this.state.current_page === 1}
-                            showFirstButton={this.state.current_page !== 1}
-                            showLastButton={this.state.current_page !== Math.ceil(this.state.articleList.length / ARTICLE_PER_PAGE)}
-                        />
+                        <Grid container item xs={12} md={9} justify="center">
+                            <Pagination
+                                onChange={this.handlePageChange}
+                                defaultPage={1}
+                                className={classes.pagination}
+                                count={Math.ceil(this.state.articleList.length / ARTICLE_PER_PAGE)}
+                                variant="outlined"
+                                shape="rounded"
+                                size='small'
+                                hideNextButton={this.state.current_page === Math.ceil(this.state.articleList.length / ARTICLE_PER_PAGE)}
+                                hidePrevButton={this.state.current_page === 1}
+                                showFirstButton={this.state.current_page !== 1}
+                                showLastButton={this.state.current_page !== Math.ceil(this.state.articleList.length / ARTICLE_PER_PAGE)}
+                            />
+                        </Grid>
                     </Grid>
-                </Grid>
 
-            </Container>
+                </Container>
         );
     }
 }

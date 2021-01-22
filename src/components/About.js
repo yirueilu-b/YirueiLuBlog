@@ -10,7 +10,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
+import {Helmet} from 'react-helmet-async';
 
 const section_padding_small = '5vh 10vw';
 const section_padding = '26vw';
@@ -74,6 +74,18 @@ class About extends React.Component {
 
         return (
             <Container className={classes.root}>
+                <Helmet>
+                    <title>About Me-YirueiLu's Blog</title>
+                    <meta name="description"
+                          content="I am a software engineer in Institute for
+                            Information Industry ( III ) and I am responsible for developing web applications and
+                            researching the latest deep learning algorithms."/>
+                    <meta name="og:title" property="og:title" content="About Me-YirueiLu's Blog"/>
+                    <meta name="og:description" property="og:description" content="I am a software engineer in Institute for
+                            Information Industry ( III ) and I am responsible for developing web applications and
+                            researching the latest deep learning algorithms."/>
+                    <meta name="og:image" property="og:image" content={process.env.PUBLIC_URL + '/code.png'}/>
+                </Helmet>
                 <ScrollToTopOnMount/>
                 <Grid
                     className={classes.content}

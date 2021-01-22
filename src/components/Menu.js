@@ -37,7 +37,7 @@ export default function TemporaryDrawer() {
     const menu_items = {
         Blog: {
             icon:<HomeIcon/>,
-            link:'/blog'
+            link:'/'
         },
         About: {
             icon:<AccountCircleIcon/>,

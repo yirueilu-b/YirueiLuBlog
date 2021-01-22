@@ -1,8 +1,8 @@
 {
-  "name": "react_blog",
+  "name": "yirueiLu-blog-cra",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://yirueilu-b.github.io/YirueiLuBlog",
+  "homepage": "http://yirueilu-b.github.io/yirueiLu-blog-cra",
   "dependencies": {
     "@iktakahiro/markdown-it-katex": "^4.0.0",
     "@material-ui/core": "^4.11.0",
@@ -17,6 +17,7 @@
     "markdown-it-highlightjs": "^3.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-helmet-async": "^1.0.6",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
@@ -25,6 +26,7 @@
     "predeploy": "python update_article_list.py && npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
+    "postbuild": "react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
