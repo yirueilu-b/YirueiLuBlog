@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css",
-    "main.js": "/YirueiLuBlog/static/js/main.ef22c2bc.chunk.js",
-    "main.js.map": "/YirueiLuBlog/static/js/main.ef22c2bc.chunk.js.map",
-    "runtime-main.js": "/YirueiLuBlog/static/js/runtime-main.4206247f.js",
-    "runtime-main.js.map": "/YirueiLuBlog/static/js/runtime-main.4206247f.js.map",
-    "static/css/2.9f6b16ab.chunk.css": "/YirueiLuBlog/static/css/2.9f6b16ab.chunk.css",
-    "static/js/2.3f4e0d7e.chunk.js": "/YirueiLuBlog/static/js/2.3f4e0d7e.chunk.js",
-    "static/js/2.3f4e0d7e.chunk.js.map": "/YirueiLuBlog/static/js/2.3f4e0d7e.chunk.js.map",
-    "index.html": "/YirueiLuBlog/index.html",
-    "precache-manifest.fa194f1b303bf0e30d3fed7f60b445c2.js": "/YirueiLuBlog/precache-manifest.fa194f1b303bf0e30d3fed7f60b445c2.js",
-    "service-worker.js": "/YirueiLuBlog/service-worker.js",
-    "static/css/2.9f6b16ab.chunk.css.map": "/YirueiLuBlog/static/css/2.9f6b16ab.chunk.css.map",
-    "static/css/main.7cc96115.chunk.css.map": "/YirueiLuBlog/static/css/main.7cc96115.chunk.css.map",
-    "static/js/2.3f4e0d7e.chunk.js.LICENSE.txt": "/YirueiLuBlog/static/js/2.3f4e0d7e.chunk.js.LICENSE.txt",
-    "static/media/opencvPython.md": "/YirueiLuBlog/static/media/opencvPython.96a26522.md",
-    "static/media/testPost.md": "/YirueiLuBlog/static/media/testPost.be192f2b.md",
-    "static/media/utterancesComment.md": "/YirueiLuBlog/static/media/utterancesComment.0155e595.md"
+    "main.css": "/yirueiLu-blog-cra/static/css/main.ae3fbfff.chunk.css",
+    "main.js": "/yirueiLu-blog-cra/static/js/main.5e5f5f98.chunk.js",
+    "main.js.map": "/yirueiLu-blog-cra/static/js/main.5e5f5f98.chunk.js.map",
+    "runtime-main.js": "/yirueiLu-blog-cra/static/js/runtime-main.ea1dbf99.js",
+    "runtime-main.js.map": "/yirueiLu-blog-cra/static/js/runtime-main.ea1dbf99.js.map",
+    "static/css/2.9f6b16ab.chunk.css": "/yirueiLu-blog-cra/static/css/2.9f6b16ab.chunk.css",
+    "static/js/2.c8c5affd.chunk.js": "/yirueiLu-blog-cra/static/js/2.c8c5affd.chunk.js",
+    "static/js/2.c8c5affd.chunk.js.map": "/yirueiLu-blog-cra/static/js/2.c8c5affd.chunk.js.map",
+    "index.html": "/yirueiLu-blog-cra/index.html",
+    "precache-manifest.6b166638dae5d09eac6339cf96c84bb9.js": "/yirueiLu-blog-cra/precache-manifest.6b166638dae5d09eac6339cf96c84bb9.js",
+    "service-worker.js": "/yirueiLu-blog-cra/service-worker.js",
+    "static/css/2.9f6b16ab.chunk.css.map": "/yirueiLu-blog-cra/static/css/2.9f6b16ab.chunk.css.map",
+    "static/css/main.ae3fbfff.chunk.css.map": "/yirueiLu-blog-cra/static/css/main.ae3fbfff.chunk.css.map",
+    "static/js/2.c8c5affd.chunk.js.LICENSE.txt": "/yirueiLu-blog-cra/static/js/2.c8c5affd.chunk.js.LICENSE.txt",
+    "static/media/opencvPython.md": "/yirueiLu-blog-cra/static/media/opencvPython.96a26522.md",
+    "static/media/testPost.md": "/yirueiLu-blog-cra/static/media/testPost.be192f2b.md",
+    "static/media/utterancesComment.md": "/yirueiLu-blog-cra/static/media/utterancesComment.0155e595.md"
   },
   "entrypoints": [
-    "static/js/runtime-main.4206247f.js",
+    "static/js/runtime-main.ea1dbf99.js",
     "static/css/2.9f6b16ab.chunk.css",
-    "static/js/2.3f4e0d7e.chunk.js",
-    "static/css/main.7cc96115.chunk.css",
-    "static/js/main.ef22c2bc.chunk.js"
+    "static/js/2.c8c5affd.chunk.js",
+    "static/css/main.ae3fbfff.chunk.css",
+    "static/js/main.5e5f5f98.chunk.js"
   ]
 }
